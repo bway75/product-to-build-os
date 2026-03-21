@@ -1,0 +1,34 @@
+# Documentation Map
+
+Lightweight index for contributors who need the methodology surface without hunting through the repo.
+
+## Read This First
+- `README.md`
+- `AGENT_MODEL.md`
+- `docs/process/ENGINEERING_WORKFLOW.md`
+- `docs/process/AGENT_RULES.md`
+- `docs/process/REQUIRED_PROJECT_ARTIFACTS.md`
+
+## Role Entrypoints
+- `KADE.md`
+- `MASON.md`
+- `LEDGER.md`
+- `CASE.md`
+
+## Core Process / Governance
+- `docs/process/AGENT_RULES.md`
+- `docs/process/ENGINEERING_WORKFLOW.md`
+- `docs/process/DEFINITION_OF_DONE.md`
+- `docs/process/REQUIRED_PROJECT_ARTIFACTS.md`
+- `docs/process/SPRINT_GOVERNANCE_REVIEW.md`
+
+## Templates
+- `docs/templates/TECHNICAL_IMPLEMENTATION_PLAN_TEMPLATE.md`
+- `docs/templates/ACCEPTANCE_TEST_PLAN_TEMPLATE.md`
+- `docs/templates/SPRINT_SPEC_TEMPLATE.md`
+- `docs/templates/CURRENT_STATE_TEMPLATE.md`
+- `docs/templates/DECISIONS_LOG_TEMPLATE.md`
+- `docs/templates/DRIFT_LOG_TEMPLATE.md`
+- `docs/templates/WORKLOG_TEMPLATE.md`
+- `docs/templates/SPRINT_GOVERNANCE_REVIEW_TEMPLATE.md`
+- `docs/templates/DOCUMENTATION_MAP_TEMPLATE.md`
