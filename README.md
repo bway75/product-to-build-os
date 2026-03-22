@@ -62,6 +62,10 @@ Template files alone do not satisfy sprint-start requirements. Before implementa
 - [docs/process/AGENT_RULES.md](docs/process/AGENT_RULES.md)
 - [docs/process/EXECUTION_HANDOFF_MODEL.md](docs/process/EXECUTION_HANDOFF_MODEL.md)
 - [docs/process/HANDOFFS_AND_ESCALATION.md](docs/process/HANDOFFS_AND_ESCALATION.md)
+- [docs/process/HANDOFF_MESSAGE_TEMPLATES.md](docs/process/HANDOFF_MESSAGE_TEMPLATES.md)
+- [docs/process/ARTIFACT_READINESS_CHECKLISTS.md](docs/process/ARTIFACT_READINESS_CHECKLISTS.md)
+- [docs/process/ROLE_TRIGGER_RULES.md](docs/process/ROLE_TRIGGER_RULES.md)
+- [docs/process/AUTOMATION_ENFORCEABILITY_ROADMAP.md](docs/process/AUTOMATION_ENFORCEABILITY_ROADMAP.md)
 - [docs/process/REQUIRED_PROJECT_ARTIFACTS.md](docs/process/REQUIRED_PROJECT_ARTIFACTS.md)
 
 ## Role Entrypoints

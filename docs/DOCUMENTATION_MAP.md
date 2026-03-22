@@ -10,6 +10,7 @@ Lightweight index for contributors who need the methodology surface without hunt
 - `docs/process/ENGINEERING_WORKFLOW.md`
 - `docs/process/AGENT_RULES.md`
 - `docs/process/EXECUTION_HANDOFF_MODEL.md`
+- `docs/process/ARTIFACT_READINESS_CHECKLISTS.md`
 - `docs/process/REQUIRED_PROJECT_ARTIFACTS.md`
 
 ## Role Entrypoints
@@ -24,6 +25,10 @@ Lightweight index for contributors who need the methodology surface without hunt
 - `docs/process/ENGINEERING_WORKFLOW.md`
 - `docs/process/EXECUTION_HANDOFF_MODEL.md`
 - `docs/process/HANDOFFS_AND_ESCALATION.md`
+- `docs/process/HANDOFF_MESSAGE_TEMPLATES.md`
+- `docs/process/ARTIFACT_READINESS_CHECKLISTS.md`
+- `docs/process/ROLE_TRIGGER_RULES.md`
+- `docs/process/AUTOMATION_ENFORCEABILITY_ROADMAP.md`
 - `docs/process/DEFINITION_OF_DONE.md`
 - `docs/process/REQUIRED_PROJECT_ARTIFACTS.md`
 - `docs/process/SPRINT_GOVERNANCE_REVIEW.md`
