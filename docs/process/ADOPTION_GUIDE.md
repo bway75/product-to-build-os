@@ -5,37 +5,38 @@ Use this guide when adopting Product to Build OS in a new project repo.
 ## Goal
 - Install the methodology with the smallest useful set of role files, process docs, and instantiated project artifacts.
 - Keep the project repo lightweight and documentation-driven.
+- Teams can start with the minimum required artifact set and expand only as project complexity requires.
 
 ## Recommended Adoption Sequence
-1. Copy the role entry files into the new project repo:
+1. Adopt or adapt the role entry files into the new project repo:
    - `KADE.md`
    - `MASON.md`
    - `LEDGER.md`
    - `CASE.md`
    - `AGENT_MODEL.md`
-2. Copy the core process docs the project wants to enforce:
+2. Adopt or adapt the core process docs the project wants to enforce:
    - `docs/process/AGENT_RULES.md`
    - `docs/process/ENGINEERING_WORKFLOW.md`
    - `docs/process/DEFINITION_OF_DONE.md`
    - `docs/process/REQUIRED_PROJECT_ARTIFACTS.md`
    - `docs/process/SPRINT_GOVERNANCE_REVIEW.md`
    - `docs/process/HANDOFFS_AND_ESCALATION.md`
-3. Copy the templates needed for project-local instantiation.
-4. Instantiate the required project-local artifacts.
-5. Update the project's documentation map so contributors can find the active artifacts quickly.
+3. Adopt or adapt the templates needed for project artifact instantiation.
+4. Instantiate the required project artifact set.
+5. Update the project's `docs/DOCUMENTATION_MAP.md` so contributors can find the active artifacts quickly.
 6. Start sprint work only after the instantiated sprint-start artifacts exist.
 
-## Minimum Project-Local Instantiation
+## Minimum Project Artifact Set
 At minimum, the project repo should instantiate:
-- current state
-- decisions log
-- drift log
-- worklog
-- sprint specs
+- `docs/CURRENT_STATE.md`
+- `docs/DECISIONS.md`
+- `docs/DRIFT_NOTES.md`
+- `docs/WORKLOG.md`
+- `docs/sprints/`
 - Technical Implementation Plan
 - Acceptance / Test Plan
 - Sprint Governance Review record
-- documentation map
+- `docs/DOCUMENTATION_MAP.md`
 
 ## Non-Negotiable Sprint Start Rule
 Before Mason starts sprint implementation, the active sprint must have instantiated working artifacts for:

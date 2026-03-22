@@ -1,17 +1,30 @@
 # Required Project Artifacts
 
-Each project repo that adopts this OS must create and maintain its own instantiated artifacts.
+Each project repo that adopts this OS must create and maintain its own instantiated project artifact set.
 
 ## Required In Every Project Repo
-- current state artifact
-- decisions log
-- drift log
-- worklog
-- sprint specs
+- `docs/CURRENT_STATE.md`
+- `docs/DECISIONS.md`
+- `docs/DRIFT_NOTES.md`
+- `docs/WORKLOG.md`
+- `docs/sprints/`
 - Technical Implementation Plan
 - Acceptance / Test Plan
 - Sprint Governance Review record
-- documentation map
+- `docs/DOCUMENTATION_MAP.md`
+
+## Recommended Naming Map
+| Artifact category | Recommended filename or path |
+|---|---|
+| current state | `docs/CURRENT_STATE.md` |
+| decisions log | `docs/DECISIONS.md` |
+| drift log | `docs/DRIFT_NOTES.md` |
+| worklog | `docs/WORKLOG.md` |
+| documentation map | `docs/DOCUMENTATION_MAP.md` |
+| sprint specs | `docs/sprints/` |
+| Technical Implementation Plans | `docs/plans/TECHNICAL_IMPLEMENTATION_PLAN_<scope>.md` |
+| Acceptance / Test Plans | `docs/plans/ACCEPTANCE_TEST_PLAN_<scope>.md` |
+| Sprint Governance Reviews | `docs/governance/SPRINT_GOVERNANCE_REVIEW_<scope>.md` |
 
 ## Required Before Sprint Implementation Starts
 - instantiated Technical Implementation Plan
