@@ -37,6 +37,7 @@ Product Brief / 6-Pager
 - `BRIAN.md`
 - `docs/process/AGENT_RULES.md`
 - `docs/process/ENGINEERING_WORKFLOW.md`
+- `docs/process/EXECUTION_HANDOFF_MODEL.md`
 - `docs/process/HANDOFFS_AND_ESCALATION.md`
 - `docs/process/DEFINITION_OF_DONE.md`
 - `docs/process/REQUIRED_PROJECT_ARTIFACTS.md`

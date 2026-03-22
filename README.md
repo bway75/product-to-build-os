@@ -60,6 +60,7 @@ Template files alone do not satisfy sprint-start requirements. Before implementa
 - [docs/process/PROJECT_BOOTSTRAP_CHECKLIST.md](docs/process/PROJECT_BOOTSTRAP_CHECKLIST.md)
 - [docs/process/ENGINEERING_WORKFLOW.md](docs/process/ENGINEERING_WORKFLOW.md)
 - [docs/process/AGENT_RULES.md](docs/process/AGENT_RULES.md)
+- [docs/process/EXECUTION_HANDOFF_MODEL.md](docs/process/EXECUTION_HANDOFF_MODEL.md)
 - [docs/process/HANDOFFS_AND_ESCALATION.md](docs/process/HANDOFFS_AND_ESCALATION.md)
 - [docs/process/REQUIRED_PROJECT_ARTIFACTS.md](docs/process/REQUIRED_PROJECT_ARTIFACTS.md)
 
