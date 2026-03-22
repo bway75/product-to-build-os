@@ -9,6 +9,7 @@ Use this guide when adopting Product to Build OS in a new project repo.
 
 ## Recommended Adoption Sequence
 1. Adopt or adapt the role entry files into the new project repo:
+   - `BRIAN.md`
    - `KADE.md`
    - `MASON.md`
    - `LEDGER.md`

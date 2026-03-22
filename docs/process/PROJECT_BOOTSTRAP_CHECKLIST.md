@@ -3,6 +3,7 @@
 Use this checklist when instantiating the OS in a new project repo.
 
 ## Bootstrap Checklist
+- Adopt or adapt `BRIAN.md`
 - Adopt or adapt `AGENT_MODEL.md`
 - Adopt or adapt `KADE.md`
 - Adopt or adapt `MASON.md`

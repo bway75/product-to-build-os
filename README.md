@@ -64,6 +64,7 @@ Template files alone do not satisfy sprint-start requirements. Before implementa
 - [docs/process/REQUIRED_PROJECT_ARTIFACTS.md](docs/process/REQUIRED_PROJECT_ARTIFACTS.md)
 
 ## Role Entrypoints
+- [BRIAN.md](BRIAN.md)
 - [KADE.md](KADE.md)
 - [MASON.md](MASON.md)
 - [LEDGER.md](LEDGER.md)

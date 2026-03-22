@@ -12,6 +12,7 @@ Lightweight index for contributors who need the methodology surface without hunt
 - `docs/process/REQUIRED_PROJECT_ARTIFACTS.md`
 
 ## Role Entrypoints
+- `BRIAN.md`
 - `KADE.md`
 - `MASON.md`
 - `LEDGER.md`

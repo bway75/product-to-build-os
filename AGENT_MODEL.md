@@ -34,6 +34,7 @@ Product Brief / 6-Pager
 - Ledger escalates significant governance gaps, workflow conflicts, or documentation/process ambiguity to Kade for triage and recommendation.
 
 ## Required References
+- `BRIAN.md`
 - `docs/process/AGENT_RULES.md`
 - `docs/process/ENGINEERING_WORKFLOW.md`
 - `docs/process/HANDOFFS_AND_ESCALATION.md`
