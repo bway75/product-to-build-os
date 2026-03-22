@@ -5,6 +5,7 @@ Reusable operating model for turning product definition into implementation-read
 This repo is the methodology layer, not a project repo. It defines:
 - role-based startup files
 - workflow and governance rules
+- project adoption guidance
 - product-to-engineering handoff expectations
 - templates for the instantiated artifacts each project must create
 
@@ -54,8 +55,11 @@ Template files alone do not satisfy sprint-start requirements. Before implementa
 ## Read This First
 - [AGENT_MODEL.md](/Users/brian.way/Repository/GitHub/product-to-build-os/AGENT_MODEL.md)
 - [docs/DOCUMENTATION_MAP.md](/Users/brian.way/Repository/GitHub/product-to-build-os/docs/DOCUMENTATION_MAP.md)
+- [docs/process/ADOPTION_GUIDE.md](/Users/brian.way/Repository/GitHub/product-to-build-os/docs/process/ADOPTION_GUIDE.md)
+- [docs/process/PROJECT_BOOTSTRAP_CHECKLIST.md](/Users/brian.way/Repository/GitHub/product-to-build-os/docs/process/PROJECT_BOOTSTRAP_CHECKLIST.md)
 - [docs/process/ENGINEERING_WORKFLOW.md](/Users/brian.way/Repository/GitHub/product-to-build-os/docs/process/ENGINEERING_WORKFLOW.md)
 - [docs/process/AGENT_RULES.md](/Users/brian.way/Repository/GitHub/product-to-build-os/docs/process/AGENT_RULES.md)
+- [docs/process/HANDOFFS_AND_ESCALATION.md](/Users/brian.way/Repository/GitHub/product-to-build-os/docs/process/HANDOFFS_AND_ESCALATION.md)
 - [docs/process/REQUIRED_PROJECT_ARTIFACTS.md](/Users/brian.way/Repository/GitHub/product-to-build-os/docs/process/REQUIRED_PROJECT_ARTIFACTS.md)
 
 ## Role Entrypoints

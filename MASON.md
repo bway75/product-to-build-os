@@ -31,6 +31,7 @@ Find all instructions for your action in the repo in `MASON.md`.
 - `AGENT_MODEL.md`
 - `docs/process/AGENT_RULES.md`
 - `docs/process/ENGINEERING_WORKFLOW.md`
+- `docs/process/HANDOFFS_AND_ESCALATION.md`
 - `docs/process/DEFINITION_OF_DONE.md`
 - `docs/process/REQUIRED_PROJECT_ARTIFACTS.md`
 

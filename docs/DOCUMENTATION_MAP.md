@@ -5,6 +5,8 @@ Lightweight index for contributors who need the methodology surface without hunt
 ## Read This First
 - `README.md`
 - `AGENT_MODEL.md`
+- `docs/process/ADOPTION_GUIDE.md`
+- `docs/process/PROJECT_BOOTSTRAP_CHECKLIST.md`
 - `docs/process/ENGINEERING_WORKFLOW.md`
 - `docs/process/AGENT_RULES.md`
 - `docs/process/REQUIRED_PROJECT_ARTIFACTS.md`
@@ -18,9 +20,15 @@ Lightweight index for contributors who need the methodology surface without hunt
 ## Core Process / Governance
 - `docs/process/AGENT_RULES.md`
 - `docs/process/ENGINEERING_WORKFLOW.md`
+- `docs/process/HANDOFFS_AND_ESCALATION.md`
 - `docs/process/DEFINITION_OF_DONE.md`
 - `docs/process/REQUIRED_PROJECT_ARTIFACTS.md`
 - `docs/process/SPRINT_GOVERNANCE_REVIEW.md`
+
+## Adoption
+- `docs/process/ADOPTION_GUIDE.md`
+- `docs/process/PROJECT_BOOTSTRAP_CHECKLIST.md`
+- `docs/EXAMPLE_PROJECT_INSTANTIATION.md`
 
 ## Templates
 - `docs/templates/TECHNICAL_IMPLEMENTATION_PLAN_TEMPLATE.md`
