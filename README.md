@@ -14,6 +14,7 @@ This repo is the methodology layer, not a project repo. It defines:
 - Preserve explicit handoffs between product, technical shaping, implementation, validation, and governance
 - Give Mason, Case, and Ledger clear rules for what must exist before sprint work starts
 - Require each adopting project to maintain its own instantiated artifacts
+- Support a single-operator PM-first default where Brian hands off to Kade and Kade coordinates the downstream flow
 
 ## What This Repo Is Not
 - It does not contain project-specific current state, decisions, drift, worklog, sprint specs, architecture, deployment, API, or environment docs.
@@ -32,6 +33,18 @@ Product Brief / 6-Pager
 -> Case validates
 -> Ledger performs Sprint Governance Review
 -> Ledger updates docs/process if needed
+
+## Preferred Default Operating Path
+Brian
+-> Kade
+-> Mason
+-> Case
+-> Ledger
+
+- Brian is the default human PM operator and product authority.
+- Kade is the default downstream technical lead and coordinator after product handoff.
+- Brian normally does not wake Mason, Case, or Ledger directly, mediate implementation questions, perform governance triage, or translate between downstream roles.
+- Manual Mode remains available as an optional fallback for smaller tasks, experiments, process debugging, or sensitive / unclear work.
 
 ## Required Project Artifacts
 Every project repo that adopts this OS should create and maintain its own instantiated project artifact set, including:

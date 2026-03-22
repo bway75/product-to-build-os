@@ -1,8 +1,13 @@
 # Execution Handoff Model
 
-This document defines the current manual handoff model between roles.
+This document defines the current practical handoff model between roles.
 
 The goal is to make execution flow explicit without introducing orchestration-platform assumptions.
+
+## Preferred Default Path
+- Brian -> Kade -> Mason -> Case -> Ledger
+- Brian normally hands product-ready work to Kade, and Kade coordinates downstream execution.
+- Brian does not normally wake Mason, Case, or Ledger directly except in Manual Mode or when Brian explicitly chooses an exception path.
 
 ## 1. Execution Package
 
@@ -21,7 +26,8 @@ This is the minimum package Mason must receive before implementation starts.
 - open risks / escalation notes
 
 ### Trigger
-- Brian and Kade hand work to Mason when the product and planning package is ready for sprint execution.
+- Kade hands work to Mason when the product and planning package is ready for sprint execution.
+- Brian's normal handoff is to Kade, not directly to Mason.
 
 ### Rule
 - Mason must not begin implementation until this execution package exists in instantiated working form.
@@ -62,7 +68,10 @@ This is the minimum package Ledger must receive after validation.
 
 ## 4. Trigger Rules
 
-### Brian / Kade -> Mason
+### Brian -> Kade
+- Trigger when product definition is ready for technical shaping and execution planning.
+
+### Kade -> Mason
 - Trigger when the execution package is ready and the sprint can start.
 
 ### Mason -> Case
@@ -92,4 +101,4 @@ Escalate to Kade when:
 - governance/process conflicts cannot be resolved within role boundaries
 - the package is incomplete in a way that materially affects the next role
 
-Kade provides triage and recommendation, and routes back to Brian when product definition is the real blocker.
+Kade provides triage, recommendation, and downstream coordination, and routes back to Brian when product definition is the real blocker.

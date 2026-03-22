@@ -2,6 +2,13 @@
 
 These rules define when roles may proceed directly and when they must escalate to Kade instead.
 
+## Default Trigger Path
+- Brian normally triggers Kade, not Mason, Case, or Ledger directly.
+- Kade normally triggers Mason once the execution package is ready.
+- Mason may trigger Case directly when the validation-start rules are satisfied.
+- Case may trigger Ledger directly when the governance-review rules are satisfied.
+- Brian may still use Manual Mode for smaller tasks, experiments, process debugging, or sensitive / unclear work.
+
 ## Mason May Trigger Case Directly When
 - the active Sprint Spec exists
 - the Acceptance / Test Plan is instantiated

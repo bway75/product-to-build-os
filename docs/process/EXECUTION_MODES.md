@@ -5,22 +5,32 @@ This document defines the supported execution styles for teams using this OS.
 The core process stays the same in every mode.
 Only the execution and transport style changes.
 
+## Default Operating Assumption
+- The default operating model is single-operator PM-first.
+- Brian is the human product operator and product authority.
+- Brian normally hands work to Kade after product definition is ready.
+- Kade is the default downstream technical lead and execution coordinator.
+- Kade returns to Brian only when a product decision is needed or when the solution/outcome is ready for review.
+- Brian does not normally wake Mason, Case, or Ledger directly except in Manual Mode or when Brian explicitly chooses an exception path.
+
 ## Supported Modes
 
 ### Mode 1 - Fully Manual
-- Brian manually initiates each role transition.
-- Best for early projects, sensitive work, or teams with low automation comfort.
+- Brian manually initiates role transitions.
+- Use this as an optional fallback or debug mode for smaller tasks, experiments, process debugging, or sensitive / unclear work.
 
 ### Mode 2 - Guided Handoffs
 - Roles use the documented handoff packages and message templates.
-- Brian still initiates most transitions.
+- Brian still initiates or approves most transitions through Kade.
 - Good when the team wants more structure without much autonomy.
 
 ### Mode 3 - Authorized Role-Triggered Flow
+- Brian hands product-ready work to Kade.
+- Kade triggers Mason when the execution package is ready.
 - Mason may trigger Case directly when the documented readiness rules are satisfied.
 - Case may trigger Ledger directly when the documented readiness rules are satisfied.
 - Mason, Case, and Ledger may trigger Kade on defined escalation conditions.
-- This is likely the default high-leverage mode for many teams.
+- This is the preferred default for many teams.
 
 ### Mode 4 - Bounded Delegated Execution
 - Roles may delegate bounded subtasks or use sub-agents within approved scope.
@@ -42,6 +52,7 @@ Only the execution and transport style changes.
 - whether handoff templates are used manually or generated automatically
 - whether readiness checks are done manually or validator-assisted
 - whether bounded sub-agent delegation is allowed inside a role's approved scope
+- how much downstream coordination Kade performs directly versus through tool-assisted handoffs
 
 ## Allowed Automation
 - role-triggered handoffs when the documented readiness rules are satisfied
@@ -59,7 +70,8 @@ Only the execution and transport style changes.
 - open-ended agent autonomy outside approved boundaries
 
 ## Practical Guidance
-- Start with the lowest mode that the team can run reliably.
+- Treat Mode 3 as the normal default unless there is a reason to stay lower.
+- Use Mode 1 when the team wants tighter human control or is debugging the process itself.
 - Move up only after the lower mode is working predictably.
 - A higher automation mode is optional; it is not a maturity requirement by itself.
 

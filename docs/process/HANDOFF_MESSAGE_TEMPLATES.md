@@ -2,7 +2,18 @@
 
 Use these as short manual transfer contracts between roles.
 
-## Brian / Kade -> Mason
+## Brian -> Kade
+- package ready: yes/no
+- artifacts included:
+  - Product Brief / 6-Pager
+  - PRD
+  - JTBD / User Stories
+- product constraints / exclusions:
+- open product decisions or risks:
+- expected next action: Kade shapes the work and prepares the downstream execution package
+- escalation needed: yes/no
+
+## Kade -> Mason
 - package ready: yes/no
 - artifacts included:
   - Product Brief / 6-Pager

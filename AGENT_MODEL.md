@@ -14,6 +14,10 @@ Canonical role model for repo-driven startup.
 - Delivery stays lightweight and documentation-driven.
 - Work follows explicit artifacts, handoffs, and review points rather than heavy orchestration.
 - Each adopting project repo must create and maintain its own instantiated artifacts.
+- Default operating assumption: Brian is the single human operator and hands product-ready work to Kade.
+- Kade is the default downstream technical lead and execution coordinator.
+- Brian normally receives back only product decisions that require PM authority or completed outcomes for review.
+- Brian does not normally wake Mason, Case, or Ledger directly in ordinary operation.
 
 ## Official Delivery Sequence
 Product Brief / 6-Pager
@@ -28,10 +32,18 @@ Product Brief / 6-Pager
 -> Ledger performs Sprint Governance Review
 -> Ledger updates docs/process if needed
 
+## Preferred Default Handoff Path
+Brian
+-> Kade
+-> Mason
+-> Case
+-> Ledger
+
 ## Escalation Model
 - Mason escalates significant implementation risks, technical ambiguity, or scope pressure to Kade for triage and recommendation.
 - Case escalates significant validation failures, acceptance ambiguity, or release risk to Kade for triage and recommendation.
 - Ledger escalates significant governance gaps, workflow conflicts, or documentation/process ambiguity to Kade for triage and recommendation.
+- Kade escalates back to Brian when product authority or scope decisions are required.
 
 ## Required References
 - `BRIAN.md`
