@@ -37,8 +37,12 @@ Before sprint implementation starts:
 
 ## During Sprint Development
 - Mason executes against the Sprint Spec, Technical Implementation Plan, and accepted product scope
-- test-first development is the default for application behavior changes when practical
-- bugs should get failing regression coverage before the fix when practical
+- Tests must be written before implementation for application behavior changes (RED-GREEN-REFACTOR):
+  - RED: Write a failing test that defines the expected behavior
+  - GREEN: Write the minimum code to make the test pass
+  - REFACTOR: Clean up the code without breaking the test
+- Infrastructure, documentation, and pure configuration changes are exempt; validate those through the appropriate review and verification path instead
+- If a bug is found, add or update a failing regression test before implementing the fix whenever practical
 - deviations from sprint scope should be logged in the project's drift log
 
 ## Pre-Merge / Pre-Closeout Gate

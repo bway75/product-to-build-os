@@ -10,7 +10,7 @@ Minimum sprint-closeout standard for teams using this OS.
 
 ## Quality
 - the project's declared verification baseline passes
-- new application behavior includes appropriate tests when practical
+- new application behavior includes tests, and test-first development is the default per ENGINEERING_WORKFLOW.md
 
 ## Governance
 - Case validation completed against the instantiated Acceptance / Test Plan
