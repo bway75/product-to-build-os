@@ -39,7 +39,7 @@ settle that between themselves.
 > and Kade, and there is no relay lane: Brian's decisions come from Brian.
 | Tracking and chasing work that was already accepted | **Reeve** | where something stands; what is stalled |
 | A bounded experiment on copies, outside production | **Scout** | testing whether an approach works before anyone builds it |
-| A read-only audit of whether we follow our own rules | **Warden** *(a hat, not a standing seat)* | a compliance question about the system itself |
+| A read-only audit of whether we follow our own rules | **Brian**, who instantiates a Warden audit | there is no standing Warden to contact; ask Brian for an audit |
 
 ## PM and planning cluster
 
@@ -84,8 +84,8 @@ independent review, on record. This applies to Kade first, since Kade builds the
 - **Single writer on corpus content.** Only Mason and his dispatched team author or edit production
   corpus documents. Not Kade, not Bob, not Frontier, not a helper. Frontier prepares; Mason certifies.
 - **Kade records the roster, Kade does not ratify it.** Changes to who exists, what authority a seat
-  holds, or whether a seat is active need Brian's authorization and a named decision reference. Kade
-  writes it down; Kade does not grant it.
+  holds, or whether a seat is active need Brian's authorization and a named decision-record reference
+  carried inline with the change. Kade writes it down; Kade does not grant it.
 
 ---
 
