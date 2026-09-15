@@ -1,0 +1,70 @@
+Confirming review round 3, READ-ONLY. Do not edit any file.
+
+Rounds 1 and 2 are at docs/gov-registration-codex-r1.md and docs/gov-registration-codex-r2.md
+(8 MUST-FIX then 3 MUST-FIX, both NOT CLEAN). Review the CURRENT state of:
+
+  AGENT_MODEL.md      (see `git diff AGENT_MODEL.md`)
+  WHO_DOES_WHAT.md    (NEW, untracked, a one page readable front door to the roster)
+
+Read both in full plus KADE.md, MASON.md, FRONTIER.md, BOB.md, DEAN.md, REEVE.md, ATHENA.md,
+CASE.md and LEDGER.md.
+
+## What changed since round 2
+
+Round 2's three MUST-FIX were dispositioned as follows.
+
+1. **Precedence was self-ratifying.** ADDRESSED. Two new paragraphs: "Kade RECORDS the roster; Kade
+   does not RATIFY it" requires Brian's authorization plus a named decision-record reference inline
+   with every roster, authority-boundary, or activation change, and declares an unratified line
+   non-governing whoever wrote it. A second paragraph forbids any seat from editing its own charter to
+   declare itself operative, backdate activation, or assert a review passed.
+2. **Registration not reproducible from version control.** ADDRESSED by actually committing the five
+   charters (commit c90022b: ATHENA.md, BOB.md, IRIS.md, POLARIS.md, VERA.md). Activation also now
+   requires the charter be tracked in version control. Verify with git that nothing referenced by
+   AGENT_MODEL.md is still untracked.
+3. **Bob's "temporary" needed to be an activation constraint.** WITHDRAWN, because the premise was
+   wrong. Brian corrected it directly on 2026-08-10: Bob is NOT being retired, he is being put back
+   into an advisor and delegate role and added to Buzz. What is temporary is the expanded day-to-day
+   direction and tracking scope, which moves to Dean and Reeve. So there is no retirement trigger to
+   set and the activation blocker built on the misreading was removed. Judge whether the current text
+   is now honest about this, and whether removing that blocker reopened anything.
+
+Two further Brian rulings landed after round 2, both of which you should evaluate as new material:
+
+4. **Case is NOT being implemented yet (Brian).** The round 2 text assigning Case the acceptance
+   verdict was removed. What remains: Kade owns gate implementation and operation, a gate's owner
+   never treats its own gate as acceptance, and until Case is stood up the independent review IS the
+   acceptance mechanism. Check this is coherent and that no acceptance duty is now orphaned or
+   circular. Specifically: if independent review is the acceptance mechanism and Kade arranges the
+   review, is that meaningfully different from self-acceptance? Say so if not.
+5. **The lead-designation question, previously withdrawn and reserved to Brian, has now been RULED by
+   Brian** and is recorded in the "Who leads an effort" section as a task-type-to-lead table. His
+   rule: the lead follows the KIND OF WORK, not a rank. Attack this hard, because round 1 killed the
+   previous attempt for circularity:
+   - Is "what kind of work is this?" genuinely less circular than "what domain does the deliverable
+     land in?", or is it the same defect renamed? Test it on: building a measurement instrument that
+     measures Mason's corpus; a capture that requires authoring a note; a gate that encodes an
+     authoring standard.
+   - Is the table COMPLETE against the actual roster and the kinds of work this system does? Name any
+     seat with no row, and any common kind of work with no lead.
+   - Can two rows both plausibly claim the same real effort? Give the concrete case.
+   - Does the contested-case rule ("Brian names the lead") actually bind, given no record location is
+     named for it? Round 1 killed the previous version partly for an unenforceable record.
+
+## Also review WHO_DOES_WHAT.md as a governance artifact in its own right
+
+It is new and it will be the file people actually read, so an error in it is worse than an error in
+the canonical file. Check: does it contradict AGENT_MODEL.md or any seat charter anywhere? Does it
+grant, imply, or soften any authority the canonical file does not grant? Does its "reach out to them
+for" column route anything to the wrong seat? Is its subordination to AGENT_MODEL.md stated clearly
+enough that it cannot be cited as authority?
+
+## Then hunt fresh
+
+Read adversarially as a seat looking for a sentence that lets it author in another's domain, accept
+its own work, or manufacture authority. Quote any such sentence. Also check for a NEW contradiction
+introduced by this round's text, particularly between the no-self-activation rule and the recorded
+BOB.md discrepancy, and between the lead table and the escalation ladders.
+
+Report MUST-FIX / SHOULD-FIX / NIT with file:line. End with an explicit verdict line: CLEAN, or NOT
+CLEAN with the MUST-FIX count. Do not rubber-stamp a fix that only looks addressed.

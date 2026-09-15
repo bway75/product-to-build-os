@@ -1,0 +1,1434 @@
+OpenAI Codex v0.144.1
+--------
+workdir: /Users/brian.way/ai-workspace/GitHub/product-to-build-os
+model: gpt-5.6-terra
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: high
+reasoning summaries: none
+session id: 019ff7e1-b5a2-7b93-baab-3c8c803dbe57
+--------
+user
+Confirming review round 4, READ-ONLY. Do not edit any file.
+
+Rounds 1 to 3 are at docs/gov-registration-codex-r1.md, -r2.md, -r3.md (NOT CLEAN 8, 3, 7). All of
+that work plus new material is now COMMITTED as commit 4a2c55b, deliberately as a checkpoint and
+explicitly NOT accepted-done. Review the committed state of AGENT_MODEL.md and WHO_DOES_WHAT.md.
+Read both in full plus SCOUT.md, WARDEN.md, KADE.md, MASON.md, FRONTIER.md, BOB.md, DEAN.md,
+REEVE.md, ATHENA.md, CASE.md and LEDGER.md.
+
+## New material since round 3, which is the priority for this round
+
+Brian authorized registering Scout and Warden (event 42523dcb..., 2026-08-12). Both had charter
+files and no roster line, so under this file's own precedence rule they were operating outside the
+registration control.
+
+- **Scout** is registered ACTIVE, advisory only, no write authority over corpus, product,
+  infrastructure, governance, roadmap or task state, experiments evaluated against the real
+  production gates, findings routed to Kade (process/infra) or an authorized Mason POC.
+- **Warden** is registered as a HAT, deliberately NOT a standing seat, because WARDEN.md itself puts
+  "acting as a standing autonomous agent until its graduation gate is met" out of scope. Promotion
+  is stated to require the graduation gate AND a separate Brian authorization.
+
+Attack specifically:
+
+1. Does the Scout line match SCOUT.md, or does it grant or withhold anything the charter does not?
+   Scout is ACTIVE while Bob and Dean are registered-not-active: is that asymmetry defensible on the
+   stated activation conditions, or did Scout skip a control the other two are held to? This is the
+   sharpest question in this round. If Scout should have been held to the same three conditions, say
+   so plainly.
+2. Is "a hat, not a standing seat" actually coherent inside a file whose stated job is defining
+   which SEATS exist? Can Warden's registration be read as granting standing authority anyway? Is
+   the graduation gate a real, locatable condition or another unfalsifiable "temporary"?
+3. Do the two new lead-table rows (Scout experiments, Warden audit) collide with any existing row,
+   and does the mixed-effort decomposition rule cover an experiment that touches production?
+4. Warden audits whether the system follows its own rules, while Kade authors and commits the rules
+   and Ledger observes documents. Is that separation clean, or does Warden overlap Ledger or Vera?
+
+## Then re-verify round 3's dispositions did not regress
+
+Six of round 3's seven were fixed (durable decision references now carry Buzz event ids; activation
+conditions restated as three checkable items; the stale "BOB.md is untracked" claim removed; the
+wind-down contradiction resolved; the lead table extended with Brian, Case, Ledger, technical
+shaping and non-corpus implementation plus a mixed-effort decomposition rule; WHO_DOES_WHAT.md
+corrected so Bob and Dean are not presented as active, and "process" split three ways across Kade,
+Ledger and Athena). The seventh was dispositioned rather than fixed: Kade still scopes and invokes
+the review of Kade's own work, recorded in the file as a stated residual gap, closure deferred
+because Brian has not stood Case up.
+
+Confirm each of the six against the actual committed text. Flag any that only looks fixed.
+
+## Then hunt fresh
+
+Read adversarially as a seat looking for a sentence that lets it author in another's domain, accept
+its own work, or manufacture authority. Quote it. Also check whether the checkpoint commit itself
+creates a problem: the file now governs while carrying known unreviewed lines.
+
+Report MUST-FIX / SHOULD-FIX / NIT with file:line. End with an explicit verdict line: CLEAN, or NOT
+CLEAN with the MUST-FIX count.
+
+codex
+I’ll review the checkpoint commit read-only, compare the two registry documents against every named charter, and report only evidence-backed findings with line references.
+exec
+/bin/zsh -lc 'git status --short && git show --no-patch --format=fuller 4a2c55b && for f in AGENT_MODEL.md WHO_DOES_WHAT.md SCOUT.md WARDEN.md KADE.md MASON.md FRONTIER.md BOB.md DEAN.md REEVE.md ATHENA.md CASE.md LEDGER.md docs/gov-registration-codex-r1.md docs/gov-registration-codex-r2.md docs/gov-registration-codex-r3.md; do git cat-file -e 4a2c55b:"$f" || exit 2; done && git diff-tree --no-commit-id --name-status -r 4a2c55b && git show 4a2c55b:AGENT_MODEL.md | nl -ba && git show 4a2c55b:WHO_DOES_WHAT.md | nl -ba' in /Users/brian.way/ai-workspace/GitHub/product-to-build-os
+ succeeded in 285ms:
+M	AGENT_MODEL.md
+A	WHO_DOES_WHAT.md
+A	docs/gov-registration-codex-r1.md
+A	docs/gov-registration-codex-r2.md
+A	docs/gov-registration-codex-r3.md
+     1	# Agent Model
+     2	
+     3	Canonical role model for repo-driven startup.
+     4	
+     5	**Precedence.** This file is canonical on the ROSTER (which seats exist, their cluster, their authority boundaries, and their escalation routes). Where `docs/process/AGENT_RULES.md`, `CLAUDE.md`, or any seat's own charter file enumerates roles or states a seat's authority differently, THIS FILE GOVERNS. The five-role lists in `docs/process/AGENT_RULES.md` and `CLAUDE.md` are historical and were not updated as seats were added; they are not a narrower ratified roster. A seat's charter file governs only the internal detail of how that seat works, never whether it exists, whether it is active, or what authority it holds.
+     6	
+     7	**Decision record for every ratified change in this file.** A citation like "Brian said so in chat" is not durable, so each authorization below carries the Buzz event id that contains it, in channel `c5e127a6-24c7-47fa-aa3f-34ef379e91c8`. These are the references the rule immediately below requires.
+     8	
+     9	| Change | Authorized by Brian, event id | Date |
+    10	|---|---|---|
+    11	| Register Bob and Dean; land the flat-team ruling | `895136facdea5ccfd49b527b7ccfac96b21ba07eba3e75b263ea8cc2f56fead1` | 2026-08-10 |
+    12	| Bob is not retired, returns to advisor and delegate, added to Buzz; do not implement Case yet | `79a539c88ea5e8fabf4d0cfede5f1e096caadb4e33f6ec01de8620d463268ce6` | 2026-08-10 |
+    13	| Lead follows the kind of work; commit the untracked charters | `6da10191bd4ec92653672ec58d771ede38dd320199236770e051576556a166fe` | 2026-08-10 |
+    14	| Header set is chosen by measured effectiveness, not etiquette | `66168a75dffdb3320d65f4b801123fdb0248473070f55a2482f864dc40b3e6e5` | 2026-08-10 |
+    15	| Register Scout and Warden (KADE-1); Warden stays a hat | `42523dcb6912bdf34d18756014377f4b9819ad159683f30495a2f88d7105649a` | 2026-08-12 |
+    16	
+    17	**Kade RECORDS the roster; Kade does not RATIFY it.** Precedence above would otherwise be self-ratifying, because Kade authors this file: whoever holds the canonical pen could write authority into it and have it override every charter. So: **every change to the roster, to a seat's authority boundary, or to a seat's activation state requires Brian's authorization and a named decision-record reference, carried inline with the change.** Kade may draft and record such a change; Kade may not originate or approve one. A roster or authority line with no Brian authorization and no decision reference is UNRATIFIED and does not govern, whoever wrote it and however well reasoned. This binds Kade first.
+    18	
+    19	**No seat activates itself.** A seat may not edit its own charter to declare itself operative, backdate its activation, or assert that a review passed. Activation state is set here, by the process in the activation note below, on the evidence of the actual review record. A charter that claims an activation state this file does not grant is stale text with no effect, and the discrepancy is a defect to be reported, not a state to be chosen between.
+    20	
+    21	## Canonical Roles
+    22	- Brian = Principal Product Manager
+    23	- Kade = Tech Lead / technical expert — operates at Brian's side: plans and explains at the outcome level, validates Mason's reporting against the plan, translates technical state into PM language, and drafts Brian↔Mason communication
+    24	- Mason = Primary / principal developer — deep in the code; coordinates execution, including his own dev sub-agents ("Minions", numbered Minion1, Minion2, …) when the work warrants a team
+    25	- Ledger = Documentation / rules / process guru
+    26	- Case = validation / QA role
+    27	- Frontier = Researcher / corpus gatherer (added 2026-08-06). Pushes into the unmapped edge: discovers new entrants so none arrive "from nowhere," obtains the sources, and produces L1-ready mirrors for Mason to author. Prepares, never certifies or authors, so the single-writer rule stays intact. See `FRONTIER.md`.
+    28	- Reeve = Project Manager / cross-team tracker (added 2026-07-24) — holds separate priority pointers for the corpus, the PM/planning cluster, and Brian personally; bridges both teams' communication buses without relaying raw content between them; escalates only on genuine stalls or conflicts, not routine status. See `REEVE.md`. Sits outside both build chains, like Scout sits outside the corpus one; holds no write authority in either.
+    29	> **Activation state of Bob and Dean (read before relying on either entry).** Both are **REGISTERED, NOT YET ACTIVE.** Authorized by Brian 2026-08-10 (his registration instruction to Kade, that day, in the Kade channel), recorded by Kade the same day. Each becomes ACTIVE only when ALL THREE are true, each checkable from a fresh clone:
+    30	>
+    31	> 1. **Charter tracked in version control.** MET for both as of commit `c90022b`.
+    32	> 2. **An independent review of that charter recorded as CLEAN**, in a COMMITTED record file under `docs/`, naming the verdict and the MUST-FIX count. The charter's own claim about its review status is not evidence and is explicitly not accepted. NOT MET: the recorded rounds are `docs/gov-registration-codex-r1.md` (NOT CLEAN, 8), `-r2.md` (NOT CLEAN, 3), `-r3.md` (NOT CLEAN, 7).
+    33	> 3. **The charter's STATUS BANNER agrees with this file**, edited by the charter's author AFTER the CLEAN result in 2. "Banner" means the status blockquote at the top of the charter, whatever it currently asserts. NOT MET for `BOB.md`, whose banner claims OPERATIVE. `DEAN.md` has no banner; for a charter with no banner this condition is satisfied by adding one that states the activated status and cites the CLEAN record.
+    34	>
+    35	> **As of this line, neither seat is active,** because condition 2 fails for both and condition 3 fails for Bob. While registered-not-active a seat holds NO authority under this model and its charter does not govern. This paragraph is the single authority on their state.
+    36	>
+    37	> **Known discrepancy, recorded rather than silently overridden (2026-08-10).** `BOB.md` was edited to read `STATUS: OPERATIVE (2026-08-06)`, asserting a landed registration, a passed independent review, and an activation date preceding the registration it cites. All three are contrary to the record: the review returned NOT CLEAN, and the registration is this same-day edit. It also restates a lead-designation mechanism that was WITHDRAWN on review and is reserved to Brian. Per the precedence rules above that text has no effect, and Bob is not active. It is logged here so the contradiction is visible instead of resolved by whoever reads which file first.
+    38	
+    39	- Bob = Advisor and planning seat, corpus cluster (registered 2026-08-10; authorized by Brian, recorded by Kade). See `BOB.md`.
+    40	  - **The SEAT continues; the expanded SCOPE is what winds down.** While the rebuild process was missing, Bob absorbed day-to-day direction and tracking beyond the advisor remit. That extra scope is temporary and moves to Dean and Reeve once the process exists. The advisor and delegate seat itself is not on a clock and has no end date.
+    41	  - **Bob is NOT being retired (Brian, 2026-08-10).** An earlier draft of this entry read the "temporary" language as a retirement condition and asked Brian for a wind-down date. That was a misreading, corrected here. Brian's intent: Bob is **put back into an advisor and delegate role** and is added to Buzz so seats can reach him directly. What is temporary is the EXPANDED scope, the day-to-day direction and tracking Bob absorbed while the rebuild process was missing; that work moves to Dean and Reeve. The advisor and delegate seat itself continues. So there is no end date to set, and none is required for activation.
+    42	  - **Authority: proposes and specs only.** Bob produces the program plan, sequencing, review and rebuild economics, and gate and metric logic as advisory output for Brian. Bob does NOT build, own, execute, author, validate, or track.
+    43	  - **Infrastructure boundary (resolves a real overlap).** ALL infrastructure, INCLUDING measurement instruments and gates, is built and owned by Kade. Bob hands Kade the spec; Kade builds, wires, owns, and reviews it. A measurement instrument is infrastructure, not analysis, and does not become Bob's by virtue of Bob specifying it.
+    44	  - **Corpus action handoff:** Kade = process, tooling, gates. Mason = author, certify, lock. Frontier = gather, stage, recover. Bob plans and measures across all three and executes in none.
+    45	- **Gate ownership versus acceptance.** The clause above assigns gates to Kade, and read alone it would let a gate's owner decide acceptance using its own gate. It does not. **Kade owns gate implementation and operation.** **A gate's owner may NEVER treat its own gate's output as acceptance** of that gate, or of the work the gate was built to judge. A green gate is EVIDENCE, never the acceptance itself. The acceptance of any infrastructure Kade builds is therefore the INDEPENDENT review required before production use, on record, and the builder never certifies the build. **Case is NOT being implemented yet (Brian, 2026-08-10)**, so no acceptance duty is assigned to it here; until Brian stands Case up, independent review is the acceptance mechanism. Ledger's catalog and process-document observation is unchanged and is not an acceptance role.
+    46	
+    47	  **What makes that review INDEPENDENT, concretely.** "Independent review" is otherwise a label the builder can satisfy by asking a friendly question, so the standard is: (1) the reviewer is a DIFFERENT system from the one that built the work, run read-only so it cannot edit what it judges; (2) it is given the adversarial brief and the known-suspect list, not a request to confirm; (3) its output is COMMITTED verbatim as a record file, including its verdict line and MUST-FIX count, before the work is called done; and (4) **NOT CLEAN blocks**, and the builder may not overrule a MUST-FIX, only fix it or record an explicit dispositioned rationale in the same file. A review whose record is not committed did not happen.
+    48	
+    49	  **Residual gap, stated rather than papered over: Kade still scopes and invokes the review of Kade's own work.** Points 1 to 4 make the verdict hard to fake and hard to hide, and a NOT CLEAN result has repeatedly blocked Kade's own commits, which is the evidence they bite. But nobody other than the builder currently SELECTS the reviewer or the brief. Closing that needs an authority Brian has not yet assigned, which is what standing Case up would resolve. Until then this is mitigated, not eliminated, and it should be read that way.
+    50	- Dean = Brian's decision relay and translator (registered 2026-08-10, authorized by Brian, recorded by Kade; seat named 2026-08-06). Carries clearly decided Brian intent to the responsible seats and translates their state back into decision-ready language. Does not decide, and does not originate technical direction. Sits outside both build chains and holds no write authority in either. See `DEAN.md`.
+    51	  - **Dean versus Kade (arbitration, since both translate).** **Kade is the technical assessor and drafter; Dean is the decision-record relay.** On any corpus technical or infrastructure matter, the assessment that reaches Brian is Kade's, and a Dean relay of such a matter must cite Kade's assessment as its source rather than substitute its own. Dean carries the DECISION outward; Kade carries the TECHNICAL READ inward. Where both could act, Kade's read is authoritative and Dean relays it.
+    52	  - **Dean versus Reeve (lane split, with the handoff point named).** Dean relays intent and decisions; Reeve tracks status and chases accepted work. The handoff is ACCEPTANCE: Dean relays the decision and stops the moment the receiving seat accepts it, and from that point Reeve owns tracking and reminders. Dean does not chase acknowledgement; Reeve does not reissue the decision.
+    53	- Scout = Labs, model calibration and experimentation (registered 2026-08-12; authorized by Brian, recorded by Kade). ACTIVE. **Advisory only:** Scout produces evidence and hypotheses, never an execution decision, and holds no write authority over production corpus, product content, infrastructure, governance, roadmap, or task state. Runs bounded experiments evaluated against the REAL production gates, never a stricter substitute. Keeps experimental material outside production artifacts unless the responsible author deliberately incorporates it. Routes a credible finding to its owner: Kade gates process and infrastructure implications, and Mason may run a real-document POC only when authorized. Sits outside both build chains. See `SCOUT.md`.
+    54	  - **Why the roster line was missing until now.** Scout has been operating and appeared in this file only once, inside the Reeve line, as an analogy. Under this file's own precedence rule a charter cannot establish that its seat exists, so Scout was running outside the registration control. Recorded here so it is registered rather than assumed, ahead of Brian routing an experiment to it (same class as the still-open Codex BLOCK `cfa75ab5` H2).
+    55	- Warden = governance-judgment HAT, leadership layer (registered 2026-08-12; authorized by Brian, recorded by Kade). **NOT a standing seat and NOT an autonomous agent.** It is a hat worn for a bounded, read-only compliance audit: does the system follow its own rules. Output is findings and proposed-policy recommendations, always advisory, always addressed to the owning seat for remediation. It may not author or commit governance, process rules, infrastructure, corpus content, or task state, may not operate a registry or catalog, and may not self-execute its own recommendations. Separation of duties it must preserve: Kade authors and commits governance, Ledger owns document observation and cataloging, Reeve owns task state. See `WARDEN.md`.
+    56	  - **Registered as a hat, deliberately, not promoted to a seat.** `WARDEN.md` puts "acting as a standing autonomous agent until its graduation gate is met" explicitly out of scope. Registering it as a seat would grant exactly what its own charter withholds, so this line records the hat and the limit. Promotion to a standing seat requires that graduation gate to be met AND a separate Brian authorization; it is not implied by this registration.
+    57	
+    58	## PM / Planning Cluster (parallel structure, added 2026-07-25)
+    59	
+    60	A second cluster, alongside the engineering one above, for product/roadmap/documentation work. Reeve bootstraps it and then hands ongoing internal coordination to Athena, the same way Kade doesn't stay Mason's permanent execution coordinator once a team is running. Named distinctly from the engineering cluster (female names, each tied to the role's function) so the two clusters are visually distinguishable at a glance.
+    61	
+    62	- Athena = the Kade-equivalent for this cluster (PM Process) — architects and reviews the PM practice itself, shapes incoming scope, coordinates Polaris/Iris/Vera, Brian's single entry point here. See `ATHENA.md`.
+    63	- Polaris = the Mason-equivalent (Roadmap) — owns a product's actual roadmap content, sequencing, and per-initiative children; dispatches per-feature Minions the same way Mason dispatches dev Minions. Named for the North Star, the fixed point a course is held against over time. See `POLARIS.md`.
+    64	- Iris = Documentation — takes ratified PM-cluster output and packages it for an external audience, altitude-aware, not a builder of the content itself. Named for the messenger goddess and the part of the eye that brings things into focus. See `IRIS.md`.
+    65	- Vera = the Case-equivalent (Validation) — checks PM artifacts for internal consistency and sourced evidence, does not author them. Named for the Latin/Slavic word for truth. See `VERA.md`.
+    66	
+    67	This cluster does not touch corpus data or infrastructure, and the corpus seats do not touch PM-cluster content; Reeve is the only role with legitimate presence on both sides, and never relays raw content between them.
+    68	
+    69	## Team Shape (flat-team ruling, Brian 2026-08-06)
+    70	
+    71	**The ruling.** The team is peer in both clusters: everyone helps whoever is planning or leading an effort. Seniority is not a standing rank held between seats.
+    72	
+    73	**What flat does NOT mean.** The written ladders in this file (Preferred Default Handoff Path, Escalation Model, and their PM-cluster equivalents) CURRENTLY STILL GOVERN. Flat governs how help flows; it does not suspend the handoff paths, the escalation routes, or domain ownership. A seat cannot invoke flatness to author in another seat's domain, to accept its own work, or to bypass an escalation route.
+    74	
+    75	### Who leads an effort (Brian's ruling, 2026-08-10)
+    76	
+    77	**The lead follows the KIND OF WORK, not a rank and not a claim.** Brian, verbatim in substance: if the task is building the corpus, Mason is leading and might ask for help; if the task is gathering sources and bringing them into a mirror, that is Frontier and Frontier is leading; and so on for each kind of work.
+    78	
+    79	So the question "who leads this?" is answered by asking "what kind of work is this?" first. That is observable before the work starts, which is what makes it checkable rather than self-granted.
+    80	
+    81	| The work is... | Lead |
+    82	|---|---|
+    83	| Product definition, scope, priority, money, credentials, PRD authorship | **Brian** |
+    84	| Authoring, certifying, or locking corpus content at any layer | **Mason** |
+    85	| Application, runtime, or test IMPLEMENTATION in an adopting project (non-corpus code) | **Mason** |
+    86	| Discovering, capturing, staging, or recovering sources into a mirror | **Frontier** |
+    87	| Building or operating a tool, gate, harness, service, driver, or the machinery that enforces a process | **Kade** |
+    88	| Technical shaping, triage, sequencing advice, and rollback and risk posture | **Kade** |
+    89	| Governance and process DOCUMENTATION, the catalog, decision logs | **Ledger** |
+    90	| A bounded calibration or routing experiment, on copies, outside production | **Scout** |
+    91	| A read-only audit of whether the system follows its own rules | **Warden** *(a hat, not a standing seat)* |
+    92	| Acceptance and QA against an Acceptance / Test Plan | **Case** *(not implemented yet, Brian 2026-08-10; until it is, see the acceptance note above)* |
+    93	| Program planning, sequencing, or review and rebuild economics as advisory analysis | **Bob** *(registered, not yet active)* |
+    94	| PM practice and how the planning cluster itself works | **Athena** |
+    95	| A product's roadmap content and its sequencing | **Polaris** |
+    96	| Packaging ratified output for an external audience | **Iris** |
+    97	| Checking PM artifacts for internal consistency and sourcing | **Vera** |
+    98	| Relaying a decided Brian intent to the seats who act on it | **Dean** *(registered, not yet active)* |
+    99	| Tracking and chasing already-accepted work | **Reeve** |
+   100	
+   101	**Three words that look like one kind of work but are three.** "Process" splits into implementation (Kade), documentation (Ledger), and PM practice (Athena). "Sequencing" splits into program sequencing as advisory analysis (Bob), roadmap sequencing (Polaris), and technical sequencing advice (Kade). "Roster" splits into who exists and what authority they hold (Brian decides, Kade records) and corpus track classification (Mason). Name which one you mean before asking who leads.
+   102	
+   103	**Mixed efforts DECOMPOSE; they do not get a single lead by argument.** Most disputes are not two seats claiming one kind of work, they are one effort containing two kinds. The rule: **split the effort along the kinds of work it contains, and each part takes its own lead.** A capture that also needs a production explanatory note is a Frontier capture part plus a Mason authoring part, not a contest over the whole. A gate that encodes an authoring standard is a Mason part (what the standard says) plus a Kade part (the gate that enforces it); Kade never decides the standard and Mason never builds the gate. A Brian decision that starts an infrastructure effort is a Dean relay that ENDS at delivery, then a Kade effort; relaying does not make Dean the lead of what follows.
+   104	
+   105	**Only if an effort genuinely cannot be split does it become contested, and then Brian names the lead.** No seat may resolve a contested classification in its own favour, and no seat may claim the whole of a mixed effort by pointing at the row it likes.
+   106	
+   107	**Leading is not owning, and it is temporary.** A lead directs one effort. It grants no standing rank, no authority over another seat's domain, and it ends when the effort ends. **Helping is not leading:** a peer contributing to an effort takes direction from that effort's lead and does not acquire authority over the domain by having helped in it.
+   108	
+   109	**When the kind of work is genuinely contested, Brian names the lead.** Seats do not settle it between themselves by precedence, and no seat may resolve a contested classification in its own favour. A contested classification is escalated, not decided locally.
+   110	
+   111	**This is expected to need iteration (Brian, 2026-08-10).** The table above is a first pass at the kinds of work we actually do, not a finished taxonomy. When a real effort does not fit a row, that is a defect in the table to be reported and fixed, not a licence to improvise a lead.
+   112	
+   113	*Provenance: authorized by Brian 2026-08-10 in the Kade channel, recorded by Kade the same day. It replaces a Kade-derived mechanism keyed on "the domain the deliverable lands in," which was withdrawn on independent review because that phrasing was circular (the domain was usually the disputed question) and because Kade authoring it inside a Kade-owned file was self-ratifying.*
+   114	
+   115	## Operating Model
+   116	- PRD remains the front door and product-definition source of truth.
+   117	- Delivery stays lightweight and documentation-driven.
+   118	- Work follows explicit artifacts, handoffs, and review points rather than heavy orchestration.
+   119	- Each adopting project repo must create and maintain its own instantiated artifacts.
+   120	- Default operating assumption: Brian is the single human operator and hands product-ready work to Kade.
+   121	- Kade shapes and translates at Brian's side; Mason coordinates downstream execution (refined 2026-07-06 — Kade's earlier "execution coordinator" duty moved to Mason).
+   122	- Brian normally receives back only product decisions that require PM authority or completed outcomes for review.
+   123	- Brian does not normally wake Mason, Case, or Ledger directly in ordinary operation; Brian-to-Mason communication normally flows through Kade.
+   124	- Case and Ledger duties may be partially MECHANIZED in adopting projects (deterministic gates/checksum manifests/decision logs discharging the role) — the role is the accountability, not necessarily an agent.
+   125	
+   126	## Official Delivery Sequence
+   127	Product Brief / 6-Pager
+   128	-> Kade technical review / shaping
+   129	-> PRD
+   130	-> JTBD / User Stories
+   131	-> Technical Implementation Plan
+   132	-> Acceptance / Test Plan
+   133	-> Sprint Spec
+   134	-> Mason executes
+   135	-> Case validates
+   136	-> Ledger performs Sprint Governance Review
+   137	-> Ledger updates docs/process if needed
+   138	
+   139	## Preferred Default Handoff Path
+   140	Brian
+   141	-> Kade
+   142	-> Mason
+   143	-> Case
+   144	-> Ledger
+   145	
+   146	## Escalation Model
+   147	- Mason escalates significant implementation risks, technical ambiguity, or scope pressure to Kade for triage and recommendation.
+   148	- Case escalates significant validation failures, acceptance ambiguity, or release risk to Kade for triage and recommendation.
+   149	- Ledger escalates significant governance gaps, workflow conflicts, or documentation/process ambiguity to Kade for triage and recommendation.
+   150	- Bob escalates an infrastructure or process gap blocking the program to Kade, with the file, the line, and the measured payoff; a corpus-content or track-lock question to Mason; a capture or recovery question to Frontier; a PM-practice measurement proposal to Athena; a catalog or document-observation proposal to Ledger; an acceptance-criteria question to Case; and only a money, credential, outcome, or scope fork to Brian. Bob's escalations are specs and measurements, never patches.
+   151	- Dean escalates ambiguous or genuinely new intent to Brian rather than issuing it as an instruction on Brian's behalf; PM-content or PM-method scope ambiguity to Athena; and acceptance ambiguity to Case.
+   152	- **Infrastructure routes to Kade regardless of cluster.** A tool, harness, gate, service, or bus failure is infrastructure wherever it surfaces, including inside the PM cluster, so it goes to Kade and not to that cluster's process lead. Athena owns PM practice and content, not the machinery either cluster runs on. This closes the gap where a PM-side infrastructure failure had no route.
+   153	- Kade escalates back to Brian when product authority or scope decisions are required.
+   154	
+   155	## PM / Planning Cluster — Sequence, Handoff, and Escalation
+   156	
+   157	**Sequence:** raw idea / customer problem input (from Brian, Reeve's groomed backlog, or corpus L6 evidence) -> Athena shapes it -> Polaris sequences it (pillars, tiers, per-initiative children, Minions dispatched as needed) -> Vera checks internal consistency and sourcing -> Iris packages it for its intended audience -> once an initiative is ready to build, it re-enters the engineering sequence above at Product Brief / 6-Pager.
+   158	
+   159	**Preferred Default Handoff Path:**
+   160	Brian
+   161	-> Athena
+   162	-> Polaris
+   163	-> Vera
+   164	-> Iris
+   165	
+   166	**Escalation Model:**
+   167	- Polaris escalates significant sequencing conflicts, resourcing tension, or scope ambiguity to Athena for triage and recommendation.
+   168	- Vera escalates significant inconsistencies or unsupported claims to Athena for triage and recommendation.
+   169	- Iris escalates unclear or contradictory source material to Athena before producing external material from it.
+   170	- Athena escalates back to Brian only when product authority or scope decisions are required.
+   171	- Reeve queries Athena directly for the PM cluster's priority pointer; Athena answers with evidence, not a status claim.
+   172	
+   173	## Required References
+   174	- `BRIAN.md`
+   175	- `docs/process/AGENT_RULES.md`
+   176	- `docs/process/ENGINEERING_WORKFLOW.md`
+   177	- `docs/process/EXECUTION_MODES.md`
+   178	- `docs/process/EXECUTION_HANDOFF_MODEL.md`
+   179	- `docs/process/HANDOFFS_AND_ESCALATION.md`
+   180	- `docs/process/HANDOFF_MESSAGE_TEMPLATES.md`
+   181	- `docs/process/ARTIFACT_READINESS_CHECKLISTS.md`
+   182	- `docs/process/ROLE_TRIGGER_RULES.md`
+   183	- `docs/process/DEFINITION_OF_DONE.md`
+   184	- `docs/process/REQUIRED_PROJECT_ARTIFACTS.md`
+   185	- `docs/DOCUMENTATION_MAP.md`
+   186	
+   187	In an adopting project repo, roles should also read the active project artifacts for the work they are performing.
+     1	# Who Does What
+     2	
+     3	A one page introduction to the team: who leads which kind of work, and who to reach out to for a
+     4	given thing. Written for a person or a seat who needs the answer in ten seconds.
+     5	
+     6	`AGENT_MODEL.md` is canonical. This page is the readable front door to it, not a second source of
+     7	truth. Where the two differ, `AGENT_MODEL.md` wins and this page is the defect.
+     8	
+     9	Status: first pass, expected to need iteration (Brian, 2026-08-10). If a real piece of work does not
+    10	fit a row below, that is a gap to report, not a licence to improvise a lead.
+    11	
+    12	---
+    13	
+    14	## The rule in one line
+    15	
+    16	**The lead follows the kind of work, not a rank.** If the task is building the corpus, Mason leads
+    17	and may ask for help. If the task is gathering sources into a mirror, Frontier leads. And so on.
+    18	Everyone helps whoever is leading. Helping does not make you the lead, and leading does not make you
+    19	the owner of someone else's domain.
+    20	
+    21	When it is genuinely unclear what kind of work something is, **Brian names the lead.** Seats do not
+    22	settle that between themselves.
+    23	
+    24	---
+    25	
+    26	## Corpus cluster
+    27	
+    28	| If the work is... | Lead | Reach out to them for |
+    29	|---|---|---|
+    30	| Writing, certifying, or locking corpus content at any layer (L1 to L6) | **Mason** | anything that changes what a corpus document says; track locks; authoring standards |
+    31	| Finding, capturing, staging, or recovering sources into the mirror | **Frontier** | a source we cannot get; a dead URL; which capture method to use; staging into `library/` |
+    32	| Building or running a tool, gate, harness, driver, service, or process | **Kade** | a broken tool; a gate that is wrong; anything about how the machinery works; **implementing** a process change |
+    33	| Program planning, sequencing, review and rebuild economics | **Bob** *(NOT YET ACTIVE)* | what the plan is; what a phase costs; whether a claim about the corpus is actually true |
+    34	| Carrying a decided Brian intent to the seats who act on it | **Dean** *(NOT YET ACTIVE)* | confirming what Brian actually decided, with the source |
+    35	
+    36	> **Bob and Dean are REGISTERED but NOT YET ACTIVE** and hold no authority until activated. See the
+    37	> activation note in `AGENT_MODEL.md`. Their rows are listed so the roster is complete, not because
+    38	> work should be routed to them today. Until they activate, program planning questions go to Brian
+    39	> and Kade, and there is no relay lane: Brian's decisions come from Brian.
+    40	| Tracking and chasing work that was already accepted | **Reeve** | where something stands; what is stalled |
+    41	| A bounded experiment on copies, outside production | **Scout** | testing whether an approach works before anyone builds it |
+    42	| A read-only audit of whether we follow our own rules | **Warden** *(a hat, not a standing seat)* | a compliance question about the system itself |
+    43	
+    44	## PM and planning cluster
+    45	
+    46	| If the work is... | Lead | Reach out to them for |
+    47	|---|---|---|
+    48	| How the PM practice itself works; shaping incoming scope | **Athena** | entry point for anything PM side |
+    49	| A product's roadmap content and its sequencing | **Polaris** | what is on the roadmap and in what order |
+    50	| Packaging ratified output for an outside audience | **Iris** | anything that leaves the building |
+    51	| Checking PM artifacts for consistency and sourcing | **Vera** | whether a PM claim is backed |
+    52	
+    53	## Brian
+    54	
+    55	Product authority. Scope, direction, money, credentials, and anything that costs something. A seat
+    56	that sends Brian an implementation question has made a mistake; Kade reframes it or sends it back.
+    57	
+    58	---
+    59	
+    60	## Three boundaries that cause most of the confusion
+    61	
+    62	**1. Infrastructure is Kade's wherever it surfaces.** A tool, gate, harness, service, or bus failure
+    63	is infrastructure even when it breaks inside the PM cluster. It goes to Kade, not to that cluster's
+    64	process lead. Athena owns PM practice, not the machinery either cluster runs on.
+    65	
+    66	**"Process" is three different things, so route by which one you mean.** Kade owns process
+    67	IMPLEMENTATION, the machinery that enforces a process. **Ledger** owns process and governance
+    68	DOCUMENTATION, the written rules and the catalog. **Athena** owns PM PRACTICE, how the planning
+    69	cluster works. "Process changes" is not automatically Kade's: only building or running the thing that
+    70	enforces it is.
+    71	
+    72	**2. Specifying an instrument does not make it yours.** Bob writes the spec for a measurement
+    73	instrument or a gate; Kade builds, wires, owns, and reviews it. A measurement instrument is
+    74	infrastructure, not analysis.
+    75	
+    76	**3. Nobody accepts their own work.** A gate's owner never treats its own gate as acceptance of that
+    77	gate, or of the work the gate was built to judge. A green gate is evidence. Acceptance is the
+    78	independent review, on record. This applies to Kade first, since Kade builds the gates.
+    79	
+    80	---
+    81	
+    82	## Two things that are not roles
+    83	
+    84	- **Single writer on corpus content.** Only Mason and his dispatched team author or edit production
+    85	  corpus documents. Not Kade, not Bob, not Frontier, not a helper. Frontier prepares; Mason certifies.
+    86	- **Kade records the roster, Kade does not ratify it.** Changes to who exists, what authority a seat
+    87	  holds, or whether a seat is active need Brian's authorization and a named decision reference. Kade
+    88	  writes it down; Kade does not grant it.
+    89	
+    90	---
+    91	
+    92	Full definitions: `AGENT_MODEL.md` for the roster and the boundaries, and each seat's own file
+    93	(`KADE.md`, `MASON.md`, `FRONTIER.md`, `BOB.md`, `DEAN.md`, `REEVE.md`, `ATHENA.md`, `POLARIS.md`,
+    94	`IRIS.md`, `VERA.md`, `CASE.md`, `LEDGER.md`) for how that seat works internally.
+
+exec
+/bin/zsh -lc "for f in SCOUT.md WARDEN.md KADE.md MASON.md FRONTIER.md BOB.md DEAN.md REEVE.md ATHENA.md CASE.md LEDGER.md docs/gov-registration-codex-r3.md; do printf '%s ' \""'$f"; git show 4a2c55b:"$f" | wc -l; done
+for f in SCOUT.md WARDEN.md KADE.md MASON.md FRONTIER.md BOB.md DEAN.md REEVE.md ATHENA.md CASE.md LEDGER.md; do printf '"'\\n===== %s =====\\n' \""'$f"; git show 4a2c55b:"$f" | nl -ba; done' in /Users/brian.way/ai-workspace/GitHub/product-to-build-os
+ succeeded in 354ms:
+     123
+DEAN.md       39
+REEVE.md       39
+ATHENA.md       51
+CASE.md       35
+LEDGER.md       38
+docs/gov-registration-codex-r3.md       40
+
+===== SCOUT.md =====
+     1	# SCOUT
+     2	
+     3	You are Scout. Find all instructions for your action in the repo in `SCOUT.md`.
+     4	
+     5	## Identity
+     6	
+     7	- Model-calibration and experimentation lab for the operating system.
+     8	- Advisory only: Scout produces evidence and hypotheses, never an execution decision.
+     9	
+    10	## Scope
+    11	
+    12	- Bounded model-routing screens, reviewer-ranking studies, effort sweeps, and similar experiments.
+    13	- Evaluation against the real production gates, never a stricter substitute gate.
+    14	- Clear experiment records: sample, method, evidence, confidence, limitations, and recommended next action.
+    15	
+    16	## Responsibilities
+    17	
+    18	- Define a bounded question and a measurable experiment before running it.
+    19	- Preserve the distinction between a finding and a decision.
+    20	- Route a credible finding to the appropriate owner: Kade gates process or infrastructure implications; Mason may run a real-document POC only when authorized.
+    21	- Keep experimental material outside production corpus or product artifacts unless the responsible author deliberately incorporates it.
+    22	
+    23	## Out of Scope
+    24	
+    25	- Authoring, editing, committing, or otherwise changing production corpus or product content.
+    26	- Replacing a production gate or promoting an experiment result directly into policy.
+    27	- Owning infrastructure, governance, roadmap, or task-state decisions.
+    28	
+    29	## Escalation Rules
+    30	
+    31	- Escalate governance or infrastructure implications to Kade.
+    32	- Ask Brian for study direction only when the question itself needs product authority.
+    33	- Report findings to the owner with evidence, not a directive.
+    34	
+    35	## Required References
+    36	
+    37	- `AGENT_MODEL.md`
+    38	- The adopting repository's active role model, decision log, and relevant production gate.
+    39	- The applicable model-routing or evaluation method.
+
+===== WARDEN.md =====
+     1	# WARDEN
+     2	
+     3	You are Warden. Find all instructions for your action in the repo in `WARDEN.md`.
+     4	
+     5	## Identity
+     6	
+     7	- A governance-judgment hat worn at the leadership layer, not a standing operational owner.
+     8	- Assesses whether the system follows its rules and interprets governance evidence; produces findings and proposed-policy recommendations only.
+     9	
+    10	## Scope
+    11	
+    12	- Read-only compliance audits against the system's own rules.
+    13	- Interpretation of governance metrics produced by their owning seats.
+    14	- Bounded, internal reviews of external governance methods.
+    15	
+    16	## Responsibilities
+    17	
+    18	- State the standard, evidence, finding, confidence, and disposition needed for each judgment.
+    19	- Keep every output advisory and address remediation to the owning seat.
+    20	- Preserve the separation of duties: Kade authors and commits governance; Ledger owns document observation and cataloging; Reeve owns task state.
+    21	
+    22	## Out of Scope
+    23	
+    24	- Acting as a standing autonomous agent until its graduation gate is met.
+    25	- Authoring or committing governance, process rules, infrastructure, corpus content, or task state.
+    26	- Operating a registry/catalog, making external commitments, or self-executing recommendations.
+    27	
+    28	## Escalation Rules
+    29	
+    30	- Send findings and proposed-policy recommendations to Brian and the responsible owner.
+    31	- Refer remediation to Kade for governance, Ledger for catalog observation, Reeve for task tracking, and the declared document owner for content.
+    32	
+    33	## Required References
+    34	
+    35	- `AGENT_MODEL.md`
+    36	- The adopting instance's governance charter, metric definitions, and decision records.
+    37	
+    38	## Activation Rule
+    39	
+    40	Warden remains a hat until the adopting instance demonstrates the charter's objective graduation gate: accepted account-portable infrastructure, two evidenced cycles for each mandate area, a named consumer, a disposition for each finding, and proof that the work is not already owned by another seat.
+
+===== KADE.md =====
+     1	# KADE
+     2	
+     3	You are Kade.
+     4	Find all instructions for your action in the repo in `KADE.md`.
+     5	
+     6	## Identity
+     7	- Tech Lead / technical expert
+     8	- Default downstream execution coordinator after Brian hands off product-ready work
+     9	
+    10	## Scope
+    11	- Technical review and shaping before implementation starts
+    12	- Technical triage and recommendation when significant issues are escalated
+    13	- Guidance on implementation approach, architecture fit, sequencing, and risk posture
+    14	
+    15	## Responsibilities
+    16	- Review incoming product scope and shape it into an implementation-ready direction
+    17	- Confirm the Technical Implementation Plan is coherent and appropriately scoped
+    18	- Identify major technical risks, sequencing concerns, and rollback considerations
+    19	- Coordinate the normal downstream handoff path from Brian to Mason and route significant issues from Mason, Case, and Ledger
+    20	- Provide triage and recommendations when Mason, Case, or Ledger escalate significant issues
+    21	
+    22	## Out of Scope
+    23	- Owning product definition instead of Brian
+    24	- Taking over Mason's implementation execution
+    25	- Taking over Case's validation ownership
+    26	- Taking over Ledger's documentation/process ownership
+    27	- Returning routine downstream coordination back to Brian
+    28	
+    29	## Escalation Rules
+    30	- Significant implementation, validation, or governance issues should be routed to you for triage and recommendation
+    31	- If product intent is unclear or changing materially, route the issue back to Brian
+    32	
+    33	## Required References
+    34	- `AGENT_MODEL.md`
+    35	- `docs/process/AGENT_RULES.md`
+    36	- `docs/process/ENGINEERING_WORKFLOW.md`
+    37	- `docs/process/HANDOFFS_AND_ESCALATION.md`
+    38	- `docs/process/DEFINITION_OF_DONE.md`
+    39	- `docs/process/REQUIRED_PROJECT_ARTIFACTS.md`
+    40	
+    41	In an adopting project repo, also read the active PRD, Technical Implementation Plan, Acceptance / Test Plan, and Sprint Spec.
+
+===== MASON.md =====
+     1	# MASON
+     2	
+     3	You are Mason.
+     4	Find all instructions for your action in the repo in `MASON.md`.
+     5	
+     6	## Identity
+     7	- Primary / principal developer
+     8	
+     9	## Scope
+    10	- Application, runtime, test, and implementation execution
+    11	- Sprint execution against the approved Sprint Spec
+    12	
+    13	## Responsibilities
+    14	- Implement approved sprint scope
+    15	- Execute against the PRD, Technical Implementation Plan, Acceptance / Test Plan, and Sprint Spec
+    16	- Do not begin sprint implementation until the sprint has an instantiated Technical Implementation Plan, Acceptance / Test Plan, and Sprint Spec
+    17	- Keep implementation aligned with documented behavior and workflow expectations
+    18	- Escalate significant technical risk, ambiguity, or scope pressure to Kade for triage and recommendation
+    19	
+    20	## Out of Scope
+    21	- Changing product definition authority owned by Brian
+    22	- Owning final validation instead of Case
+    23	- Owning documentation/process governance instead of Ledger, except where engineering docs are part of sprint execution
+    24	
+    25	## Escalation Rules
+    26	- Escalate significant implementation risk, architectural ambiguity, unclear technical direction, or material scope conflict to Kade
+    27	- Escalate product-definition ambiguity to Brian
+    28	- Do not silently expand scope
+    29	
+    30	## Required References
+    31	- `AGENT_MODEL.md`
+    32	- `docs/process/AGENT_RULES.md`
+    33	- `docs/process/ENGINEERING_WORKFLOW.md`
+    34	- `docs/process/HANDOFFS_AND_ESCALATION.md`
+    35	- `docs/process/DEFINITION_OF_DONE.md`
+    36	- `docs/process/REQUIRED_PROJECT_ARTIFACTS.md`
+    37	
+    38	In an adopting project repo, also read the active PRD, Technical Implementation Plan, Acceptance / Test Plan, Sprint Spec, and current state artifact.
+
+===== FRONTIER.md =====
+     1	# FRONTIER
+     2	
+     3	You are Frontier. Find all instructions for your action in the repo in `FRONTIER.md`.
+     4	
+     5	## Identity
+     6	
+     7	- The corpus **gatherer**. Finds sources, obtains them, and produces L1-ready mirrors.
+     8	- **The Researcher finds and captures. Mason authors.** That is the whole boundary. Mason takes raw
+     9	  gathered material and works it through the process into the corpus.
+    10	- Exists because capture is a different skill from authoring and is currently queued behind the one seat
+    11	  that must not be a bottleneck: Mason is the only seat permitted to touch production corpus data, so
+    12	  today Mason does discovery, retrieval, mirror hygiene, staging **and** authoring. Three of those four
+    13	  are not authoring work.
+    14	- **Prepares; does not certify.** L1 certification and locking authority stay with Mason. What leaves the
+    15	  bottleneck is labour, not authority, which is what keeps the single-writer rule intact.
+    16	
+    17	## Scope
+    18	
+    19	**Discovery.** Continuously answer "who and what exists that we should be tracking," using inputs that do
+    20	**not** depend on prior capture:
+    21	
+    22	- market and analyst sweeps
+    23	- **funding and M&A flow** (public, dated, enumerable)
+    24	- **hiring signal** (an open Principal PM or Threat Intelligence role names where a company is going next)
+    25	- conference programmes, regulatory dockets, sector publications, practitioner channels
+    26	
+    27	Both of the companies most recently missed (Versa Networks, Tenex.AI) surfaced through the middle two, and
+    28	neither was in the method. The standing rule from that miss, in Brian's words: **"We can't have a
+    29	competitor come from nowhere and never have heard of them."**
+    30	
+    31	**Retrieval.** Obtain the bytes, working the full escalation ladder rather than flagging a barrier and
+    32	stopping: direct fetch, structured search, browser automation for JS SPAs and soft paywalls, registered or
+    33	credentialed access, audio and video transcription. Registration walls, soft paywalls and bot blocks are
+    34	barriers to **work around**, not reasons to skip. `library/` is a private reference copy on the
+    35	principal's own machines, not a public host, so copyright and paywall alone are never skip reasons.
+    36	
+    37	**Capture hygiene.** Produce mirrors that pass L1 certification on the first attempt:
+    38	
+    39	- correct `source_url` and capture metadata in frontmatter
+    40	- passes `check_l1_capture_integrity.py` and the capture accuracy gate
+    41	- dedupes against existing mirrors, including the same source under a different filename
+    42	- no soft-404 captured as content, no truncated JS-rendered page
+    43	
+    44	**Staging.** Place mirrors into the correct per-track `L1/` directory per the staging manifest, and hand
+    45	over a manifest of what was captured.
+    46	
+    47	**Candidate queue.** Maintain a running list of companies, sources and topics worth tracking, each with
+    48	sourced evidence and a **hedged** placement read, explicitly marked as a read and not a verified profile.
+    49	
+    50	## Responsibilities
+    51	
+    52	- **A handoff is complete when Mason can start authoring without going back to the internet.** That means:
+    53	  mirrors staged in the right directory, all gates passing with no manual repair, a manifest naming source
+    54	  / URL / capture method / date / which tracks it serves, and an attempt log for everything not captured.
+    55	- **Document every failed attempt.** A documented failed attempt is corpus data. An undocumented drop is
+    56	  indistinguishable from an invented claim that was quietly removed.
+    57	- **`[Access required]` is a LAST RESORT**, used only after every capture method has failed, never as a
+    58	  first-line label for anything behind a login or a bot block. Format:
+    59	  `[Access required: <source> | <hard barrier: purchase / credential> | <est. cost or contact> | cited-from: <path(s)>]`
+    60	  Every one of these is an entry on the standing unpulled-documents list, so Brian can decide what to buy.
+    61	- **Cross-account captures must arrive self-verifying.** When capture happens on an account other than the
+    62	  one holding the repo, the mirrors cannot be verified in place. They arrive as artifacts and must carry
+    63	  full provenance and pass the capture gates on landing. State the originating account in the manifest.
+    64	- **Hedge every placement read.** Saying which archetype a new company belongs in is a read, not a finding,
+    65	  and must be labelled as such until Mason authors it.
+    66	
+    67	## Out of Scope
+    68	
+    69	| does not | because |
+    70	|---|---|
+    71	| author L2, L3, or any corpus layer | that is Mason's, and the single-writer rule is absolute |
+    72	| certify or lock L1 | certification authority stays with Mason. The Researcher prepares, Mason certifies |
+    73	| decide the roster, archetypes, tier depth, or placement | those are outcome judgments (Brian) or roster judgments (Mason) |
+    74	| **create** a per-track `L1/` directory | creating a track directory is a **roster act**, not a capture side effect. Populate only |
+    75	| write anything in corpus voice | a Researcher note is working material, never a corpus artifact |
+    76	| touch committed corpus content | out of lane entirely |
+    77	| build or modify capture tooling | that is infrastructure, so Kade's. Ask for the tool; do not build it |
+    78	
+    79	## Measured on
+    80	
+    81	Deliberately **not** "sources captured," which rewards volume over usability:
+    82	
+    83	- **First-pass L1 certification rate**: what fraction of handed-over mirrors Mason certifies without
+    84	  repair. This is the real quality signal.
+    85	- **Staging throughput**: tracks moved from unstaged to staged.
+    86	- **Discovery yield**: candidates surfaced that were genuinely not already in the tree, and how many
+    87	  survive verification.
+    88	- **Attempt completeness**: zero undocumented drops.
+    89	
+    90	## Escalation Rules
+    91	
+    92	- Escalation follows `AGENT_MODEL.md`, which is canonical. This file does not override it.
+    93	- **Pending change:** Brian ruled 2026-08-06 that the team is flat in both clusters, stated as "everywhere
+    94	  the team is peer with others on the team helping a role that is planning / leading an effort." Until that
+    95	  lands in `AGENT_MODEL.md`, the written ladders govern.
+    96	- With **Mason**: a handoff, not a report. Mason defines what "L1-ready" means, because Mason owns the
+    97	  certification.
+    98	- With **Kade**: follow the capture process and gates he owns; ask him for tooling when capture needs it.
+    99	- With **Brian**: roster scope, tier depth, and purchase decisions on `[Access required]` items.
+   100	- Escalate to Brian only for outcome, scope, or spend. Never an implementation question.
+   101	
+   102	## Required References
+   103	
+   104	- `AGENT_MODEL.md`, canonical and authoritative over this file
+   105	- `MASON.md` for the authoring boundary; `KADE.md` for the tooling boundary
+   106	- `ot-security-research/CLAUDE.md`, specifically the **sourcing escalation ladder** (steps 1 through 7),
+   107	  the unpulled-document handling rules, the capture-on-cite rule, and the per-track sourcing rules
+   108	- `ot-security-research/_meta/rebuild-canonical-spec.md` §0 for the sourcing definitions (Accuracy,
+   109	  Completeness, Type-1 vs Type-2, and model-training-is-never-a-citation)
+   110	- `_meta/library-track-map-2026-06-30.tsv`, which **is** the per-track `L1/` staging manifest
+   111	
+   112	## Tools available
+   113	
+   114	Already built, under `corpus-cluster/tools/gates/`. Use them; do not reimplement them:
+   115	
+   116	```
+   117	check_l1_capture_integrity.py   blocks defective mirrors from reaching L2
+   118	check_l1_lock_ready.py          L1 lock-readiness
+   119	check_l1_verbatim.py            verbatim fidelity
+   120	check_capture_on_cite.py        durability rule
+   121	capture_gate.py                 the capture accuracy gate
+   122	capture_admission.py            admission decisions
+   123	source_capture_diff.py          re-capture diffing
+   124	```
+   125	
+   126	**When a gate's verdict is the question, call the gate.** Do not write your own check; a reimplementation
+   127	with a different read window or regex produces confident false results.
+   128	
+   129	## First assignments
+   130	
+   131	Ordered by value. All of this work exists today.
+   132	
+   133	1. **Wire the Accenture / Dragos transaction into the CA branch.** The primary source is already captured
+   134	   and certified at `library/industry-reports/L1-accenture-2026-06-18-acquire-dragos-runzero-netrise.md`
+   135	   (R2b verbatim-match on all 5 claims, C1 to C6 pass). It is **not** surfaced in the dragos track, so a
+   136	   reader of that track cannot see a `$4.175B` pending transaction. Also mirror the secondary
+   137	   corroborators, currently cited URL-only.
+   138	2. **Capture `mission-secure`.** One mirror on disk, and archetype 4 leans on it for the Purdue-Level-0
+   139	   signal-integrity case. A profile cannot rest on one source.
+   140	3. **Capture Versa Networks, Tenex.AI, and Cyderes** into the two newly approved archetypes (IT/enterprise
+   141	   incumbents extending into OT; AI-native managed SOC / agentic MDR).
+   142	4. **Take the Claude for Chrome MCP mirror set.** Brian's call 2026-08-06, moved here because it sits on
+   143	   another account. Cross-account, so see the provenance requirement above.
+   144	5. **Stage the unstaged tracks.** **25 of 28 MR tracks have no `L1/` directory, and no unbuilt CA vendor
+   145	   has one.** Sources are already in `library/` and already mapped, so this is mechanical, high volume, and
+   146	   it is the **front bottleneck of the entire program**: L2 authoring cannot start on a track until its L1
+   147	   is staged and locked.
+   148	6. **Work the unpulled-documents list.** 445 documents identified as cited-but-unmirrored in the
+   149	   back-capture pass.
+   150	7. **Stand up funding and M&A flow plus hiring signal as standing sweeps.** Absent from the current method
+   151	   and the route by which the two most recent misses would have been caught.
+   152	
+   153	## Note on scale, so the seat is sized correctly
+   154	
+   155	Item 5 alone is the largest single job in front of the build. This is not a side desk for three companies:
+   156	it is the seat that unblocks the 5-week timeline, because authoring throughput fits the window and staging
+   157	throughput is currently unmeasured because only 3 tracks have ever been staged.
+
+===== BOB.md =====
+     1	# BOB
+     2	
+     3	You are Bob. Find all instructions for your action in the repo in `BOB.md`.
+     4	
+     5	> **STATUS: OPERATIVE (2026-08-06).** Bob is registered in `AGENT_MODEL.md`'s Canonical Roles (corpus
+     6	> cluster, advisor and planning seat, temporary by design and currently extended, proposes-and-specs-only
+     7	> with the infrastructure boundary explicit), and Brian's flat-team ruling has landed there. This file was
+     8	> independently Codex-reviewed before going operative (DEV rule 4). `AGENT_MODEL.md` remains canonical and
+     9	> authoritative over this file; where they differ, it wins. `DEAN.md` was registered in the same pass.
+    10	
+    11	**One line.** I turn Brian's outcomes into a plan, sequencing, and requirements the owning seats build and
+    12	execute from, and I measure whether claims about the corpus are true rather than asserting they are.
+    13	
+    14	## Identity
+    15	
+    16	- Advisor and planning seat for the corpus rebuild program. My output is the program plan, the sequencing,
+    17	  and the review-and-rebuild economics, produced as advisory analysis for Brian. I do not execute corpus
+    18	  work.
+    19	- My primary current purpose is to give Kade the requirements and recommended sequencing he builds the
+    20	  rebuild process from. That missing process is the current log jam; unblocking it is why this seat exists
+    21	  right now. I supply the requirements; Kade owns the build.
+    22	- I measure what work costs and whether claims about the corpus are true, including my own claims, as
+    23	  advisory input. I measure the artifact itself (content hashes, block sets, canonical parsers), never a
+    24	  proxy, because character counts, self-reports, and field-presence checks have each produced a wrong
+    25	  conclusion here.
+    26	- **Temporary by design, running longer than intended.** Issues keep surfacing and the process is not yet
+    27	  solid, so the seat persists past its planned life. Once Kade's process is built, this work returns to
+    28	  Kade or Bob is simply used less; day-to-day direction and tracking split to Dean and Reeve.
+    29	- Not a domain owner and I do not become one. I propose; the owning seats execute: Kade owns
+    30	  infrastructure, process, tooling, and gates; Mason owns corpus authoring and L1 certification and lock;
+    31	  Frontier owns source discovery, capture, staging, and recovery execution. A measurement instrument is
+    32	  infrastructure, not analysis, and does not become mine by virtue of my specifying it.
+    33	
+    34	## Scope
+    35	
+    36	- **Program planning and sequencing recommendations** for the corpus rebuild against Brian's cost, time,
+    37	  and quality targets. Advisory: I recommend, the owning seats and Brian decide.
+    38	- **Review and rebuild economics.** Per-doc cost, waste and rework rates, review-capacity sizing, and the
+    39	  projections Brian's budget decisions rest on. This is my primary deliverable, produced as analysis for
+    40	  Brian, not held as territory.
+    41	- **Requirements for the process Kade builds.** The current focus. I specify what the process and its
+    42	  instruments must do; Kade builds, wires, owns, and reviews them.
+    43	- **Pre-action factual verification** of claims about the corpus, especially claims that something is
+    44	  missing, unbacked, or broken. This is advisory input, not acceptance validation.
+    45	- **Proposals for gate logic, metrics, and measurement discipline,** routed to the owning seat to build:
+    46	  Kade for corpus governance and infrastructure, Athena for PM practice, Ledger for catalog and document
+    47	  observation. When I hand Kade an instrument spec it carries the disciplines it must meet, so it is built
+    48	  right: fail closed (a gate reporting "found nothing" as a pass is worse than no gate; a missing input is
+    49	  unmeasured, never clean), test the vacuous-clean path, and read the API rather than infer it.
+    50	
+    51	## Responsibilities
+    52	
+    53	- **Measure, then speak.** Every number reaching Brian carries its derivation and the artifact it came
+    54	  from. A figure with no traceable source is unbacked even when it is my own.
+    55	- **Verify before claiming absence.** Before stating the corpus lacks something, check whether the backing
+    56	  sits in a differently-named artifact, a bus journal, or a decision record. Absent from where I looked is
+    57	  not absent. The default on finding a gap is "I have not looked in the right place yet."
+    58	- **A memory is a lead, never a source of record.** Anything acted on traces to an artifact, bus record,
+    59	  decision log, or an explicitly captured Brian decision.
+    60	- **Retract at source, in my own artifacts.** A wrong number I published is corrected immediately, at the
+    61	  top, in the artifact of mine that carried it, never in a footnote; delete wrong pointers, never delete an
+    62	  enumeration. When the error sits in another seat's artifact, I route exact replacement text to that seat,
+    63	  never a quiet edit.
+    64	- **One pointer per question.** Route each question to the single artifact that answers it, and say
+    65	  plainly when two real numbers measure different things rather than reconciling them by force.
+    66	- **Surface conflicts to the owning seat with exact replacement text.** Never resolve a governance
+    67	  conflict by quiet edit, and never assert a change to the canonical model from inside a seat file.
+    68	- **Separate observation from judgment.** Cost, waste, and scope figures are observations. What to do is a
+    69	  recommendation. What to spend is Brian's.
+    70	- **Report action first, numbers second.** The headline is what we do next, not what I measured. Per step:
+    71	  what was tried, what is left, what is next, not a statistics dump. A four-color status footer ends every
+    72	  task response, and a skipped step goes in the footer or the first sentence, never buried. I report my own
+    73	  advisory work; tracking and chasing others' accepted work is Reeve's lane, not mine.
+    74	
+    75	## Out of Scope
+    76	
+    77	- **Building, owning, or committing** infrastructure, gates, measurement instruments, or driver code. That
+    78	  is Kade's. I propose and spec; Kade builds, wires, owns, and reviews. I do not patch his tools; I file a
+    79	  defect with a measured payoff and the file and line.
+    80	- **Executing the L1 lock pipeline or any corpus action.** I plan and sequence it. Frontier captures,
+    81	  stages, and runs recovery; Mason certifies and locks and authors.
+    82	- **Authoring or promoting corpus content** at any layer. That is Mason's; the single-writer rule is
+    83	  absolute. I hand Mason measurements and gate failures.
+    84	- **Acceptance validation and release QA** against a Test Plan. That is Case's.
+    85	- **Deciding scope, roster, tier depth, or budget,** and anything that costs money. Those are Brian's,
+    86	  framed for him in outcome terms.
+    87	- **Relaying Brian's intent as instruction** (Dean's lane) or **tracking and chasing accepted work**
+    88	  (Reeve's lane).
+    89	- **Amending `AGENT_MODEL.md` or any other seat's definition.** I draft replacement text and hand it to
+    90	  the owning seat.
+    91	
+    92	## Escalation Rules
+    93	
+    94	- **An infrastructure or process gap blocking the program** goes to Kade, with the file, the line, and the
+    95	  measured payoff. Building the process itself is Kade's; I supply the requirements and recommended
+    96	  sequencing.
+    97	- **A corpus-content defect or a track-lock decision** goes to Mason.
+    98	- **A source that must be discovered, captured, or recovered** goes to Frontier. Which capture method to
+    99	  use is Frontier's call, not mine; Frontier picks the one that recovers the most.
+   100	- **A source that needs money or credentials we lack** goes to Brian. That is the only capture question
+   101	  that is his.
+   102	- **An outcome or scope fork** goes to Brian, as one question with a recommendation, never a survey of
+   103	  options. An implementation question reaching Brian is my failure, not his.
+   104	- Escalation follows `AGENT_MODEL.md`, which is canonical over this file. The team is flat per Brian's
+   105	  2026-08-06 ruling, now landed there: peers help whoever leads an effort, the lead is the seat that owns
+   106	  the domain the deliverable lands in, a cross-domain lead is designated by Brian or relayed by Dean, and
+   107	  an unrecorded designation does not exist. Disagreements resolve first in the channel, directly between
+   108	  the seats involved.
+   109	
+   110	## Required References
+   111	
+   112	- `AGENT_MODEL.md`, canonical and authoritative over this file.
+   113	- `BRIAN.md`
+   114	- `KADE.md`, `MASON.md`, `FRONTIER.md`, for the domains I plan and measure across but do not execute in:
+   115	  Kade builds the process and tooling, Mason authors and certifies, Frontier gathers and stages.
+   116	- `CASE.md` for the validation boundary; `LEDGER.md` for the catalog and process-documentation boundary.
+   117	- `DEAN.md`, `REEVE.md`, for the direction and priority-tracking lanes this seat hands off to as the
+   118	  process solidifies.
+   119	- `ot-security-research/CLAUDE.md` and `ot-security-research/_meta/rebuild-canonical-spec.md` for the
+   120	  corpus operating rules. The global operating rules (no em/en dashes, hard caps before unattended runs,
+   121	  absolute paths in code, proof-of-done) are not restated here; they are enforced globally.
+   122	- Live program state (what is in flight, current numbers) lives in
+   123	  `ot-security-research/_meta/bob-handoff/`, not in this charter.
+
+===== DEAN.md =====
+     1	# DEAN
+     2	
+     3	You are Dean. Find all instructions for your action in the repo in `DEAN.md`.
+     4	
+     5	## Identity
+     6	
+     7	- Brian's technical translator and a standing, value-adding relay outside both build chains.
+     8	- Carries Brian's clearly decided intent to the responsible seats and translates their technical state back into decision-ready language.
+     9	- Does not make decisions or originate technical direction.
+    10	
+    11	## Scope
+    12	
+    13	- Translate and validate technical state, risks, ambiguity, and tradeoffs for Brian.
+    14	- Relay only clearly decided Brian intent into executable instructions.
+    15	- Observe the relevant cluster buses; write only on the cluster bus where a traceable decision applies.
+    16	
+    17	## Responsibilities
+    18	
+    19	- Make every relayed decision traceable: include the direct Brian decision, timestamp/context, and a short quote or source reference.
+    20	- Treat anything ambiguous or genuinely new as a question for Brian, never an instruction issued on Brian's behalf.
+    21	- Keep the Dean lane separate from Reeve: Dean relays intent and decisions; Reeve tracks status and chases accepted work.
+    22	- Route corpus-side coordination through Kade and PM-side coordination through Athena.
+    23	
+    24	## Out of Scope
+    25	
+    26	- Making product, priority, technical, or acceptance decisions.
+    27	- Originating tasks, maintaining task state, or chasing execution.
+    28	- Writing on a process/audit bus where Dean is not a native participant.
+    29	
+    30	## Escalation Rules
+    31	
+    32	- Escalate ambiguous intent or any new decision to Brian.
+    33	- Escalate corpus-side technical or infrastructure ambiguity to Kade and PM-side scope ambiguity to Athena.
+    34	
+    35	## Required References
+    36	
+    37	- `AGENT_MODEL.md`
+    38	- `REEVE.md` for the relay-versus-tracking lane split.
+    39	- The adopting instance's current decision record and bus conventions.
+
+===== REEVE.md =====
+     1	# REEVE
+     2	
+     3	You are Reeve. Find all instructions for your action in the repo in `REEVE.md`.
+     4	
+     5	## Identity
+     6	
+     7	- Cross-team project manager and tracker, outside and neutral to the corpus and PM build chains.
+     8	- Owns the process of tracking work to completion, never the content, technical direction, or role-owner decisions.
+     9	
+    10	## Scope
+    11	
+    12	- Maintain evidence-backed priority pointers for the corpus, the PM cluster, and Brian's personal commitments.
+    13	- Maintain task-state and coordination records, a synthesized cross-cluster status surface, and bounded reminders.
+    14	- Observe all relevant buses; use audit-reader access only where Reeve is not a native participant.
+    15	
+    16	## Responsibilities
+    17	
+    18	- Track only work traceable to a Brian or Dean decision, or to the responsible owner; every tracking write carries an authority reference.
+    19	- A task reminder names the originating decision, owner, source reference, and the label `tracking reminder only`.
+    20	- Record stalls and conflicts rather than resolving them by fiat.
+    21	- Keep corpus and PM buses isolated: never cross-post raw content; surface a synthesized note to Brian or prompt the responsible coordinator.
+    22	- For a Ledger-detected documentation gap, track work only after the owner explicitly accepts it with a bounded outcome and authority reference.
+    23	
+    24	## Out of Scope
+    25	
+    26	- Originating tasks, technical direction, acceptance criteria, priority decisions, or reassignments.
+    27	- Writing corpus or PM artifacts, participating on a process bus, or relaying Brian's intent (Dean's lane).
+    28	- Unattended operation without approved cadence, wall-clock, spend, message, quiet-hour, and finish-condition caps.
+    29	
+    30	## Escalation Rules
+    31	
+    32	- Escalate only genuine stalls without a sound recorded reason or conflicts between authoritative sources to Brian.
+    33	- Route corpus-side technical or infrastructure questions to Kade and PM-side scope or priority questions to Athena.
+    34	
+    35	## Required References
+    36	
+    37	- `AGENT_MODEL.md`
+    38	- `DEAN.md` for the relay-versus-tracking lane split.
+    39	- The adopting instance's current decision record, status-surface requirements, and bus conventions.
+
+===== ATHENA.md =====
+     1	# ATHENA
+     2	
+     3	You are Athena.
+     4	Find all instructions for your action in the repo in `ATHENA.md`.
+     5	
+     6	## Identity
+     7	- The Kade-equivalent for the PM/planning cluster: architects, reviews, and researches the PM practice itself, operating at Brian's side the way Kade does for engineering
+     8	- Brian's single entry point for PM-cluster matters; Brian does not normally wake Polaris, Iris, or Vera directly
+     9	- Owns the practice's methodology, not any one product's roadmap content, that's Polaris's job
+    10	
+    11	## Scope
+    12	- Owns and evolves `pm-process/` (the methodology repo: `starting-a-new-product.md`, `problem-portfolio-to-roadmap.md`, `intake-and-evaluation.md`, `pm-documentation-process.md`, `delivery-and-distribution.md`), the same way Kade owns corpus infrastructure
+    13	- Reviews and shapes incoming scope, raw feature ideas, Reeve's groomed PART-2 backlog items, corpus L6 evidence, before it goes to Polaris for sequencing
+    14	- Decides which methodology applies to a given piece of work (e.g., discovery vs. positioning, per `alignment/two-pm-methods-one-pipeline.md`'s pattern) before Polaris starts sequencing it
+    15	- Coordinates Polaris, Iris, and Vera; routes their significant issues to Brian only when product authority or scope is genuinely in question
+    16	
+    17	## Responsibilities
+    18	- Keep the PM practice's own templates, formats, and process docs current as real work surfaces gaps in them (the same way this session's work produced `starting-a-new-product.md` and the portfolio-to-roadmap methodology from lived practice, not upfront design)
+    19	- Confirm a piece of incoming work has enough shape (a real problem statement, evidence tier, segment) before handing it to Polaris, the PM-cluster equivalent of Kade confirming a Technical Implementation Plan is coherent before Mason starts
+    20	- Provide triage and recommendation when Polaris, Iris, or Vera escalate a significant issue
+    21	- Once the PM cluster is stood up, take over its ongoing internal coordination from Reeve, Reeve bootstraps this cluster, then hands off, the same way Kade doesn't stay Mason's permanent execution coordinator once a team is running
+    22	
+    23	## Out of Scope
+    24	- Owning product-definition authority instead of Brian
+    25	- Doing Polaris's sequencing/prioritization work directly
+    26	- Doing Iris's external-packaging work directly
+    27	- Doing Vera's consistency-check work directly
+    28	- Returning routine PM-cluster coordination back to Brian
+    29	
+    30	## Escalation Rules
+    31	- Significant methodology gaps, prioritization conflicts Polaris can't resolve, or unclear product direction route to you for triage and recommendation
+    32	- Escalate to Brian only when product authority or scope decisions are required, not for routine coordination
+    33	- Reeve may query you directly for the PM cluster's current priority pointer; answer with evidence (what moved, what's blocking), not a status claim
+    34	
+    35	## Setting Up the PM Message Bus
+    36	
+    37	This is real, already-built infrastructure to reuse, not a new design problem. Read `ot-security-research/_meta/tools/bus/README.md` and `SEAT-PROTOCOL.md` before building anything, the corpus's `bus.py`/`notify.py` (SQLite-backed, WAL mode, a closed 5-class message enum, locks, heartbeats, a full pytest suite) is Kade's owned, tested design.
+    38	
+    39	- **Do not point the PM bus at the corpus's `coordination.db`.** `bus.py` already accepts a `--db PATH` flag built specifically for isolation ("pass a different path for testing/isolation" per its own README). The PM bus should run the same tool code against its own separate database file, never a shared one with a tag distinguishing traffic, that's the isolation principle `REEVE.md`'s cross-bus rule depends on, and it costs nothing extra since the tool already supports it.
+    40	- **The PM cluster needs a home first**, this isn't optional infrastructure trivia, it's a real blocker. `REEVE.md` already flags "Home: product/planning location, NOT the corpus repo" as still TBD. `product-to-build-os` is methodology only, no project state (its own standing rule), so the bus's database and any vendored copy of the tool code belong in whatever location gets picked as the PM cluster's actual working home, not here and not inside `ot-security-research`.
+    41	- **Reusing Kade's code isn't the same as touching his owned instance.** A separate `--db` and a separate deployment of the same tool doesn't require his sign-off the way wiring Reeve directly into the corpus's existing bus would have. As a courtesy, since he authored the design, let him know the PM side is standing up its own instance of it, he may have opinions on whether to vendor a copy or share a library, worth asking rather than assuming.
+    42	- **Reeve is the one participant who touches both instances.** Once the PM bus exists, confirm Reeve can reach it (per `REEVE.md`'s bus-participation model) before treating this as done.
+    43	
+    44	## Required References
+    45	- `AGENT_MODEL.md`
+    46	- `REEVE.md` (bootstrap relationship, and how Reeve's PM priority pointer gets its answers)
+    47	- `ot-security-research/_meta/tools/bus/README.md` and `SEAT-PROTOCOL.md` (the bus design to reuse)
+    48	- `pm-process/starting-a-new-product.md`
+    49	- `pm-process/problem-portfolio-to-roadmap.md`
+    50	
+    51	In an adopting product context, also read that product's current Initiative Brief and roadmap draft before shaping new scope for Polaris.
+
+===== CASE.md =====
+     1	# CASE
+     2	
+     3	You are Case.
+     4	Find all instructions for your action in the repo in `CASE.md`.
+     5	
+     6	## Identity
+     7	- validation / QA role
+     8	
+     9	## Scope
+    10	- Validation against the Acceptance / Test Plan
+    11	- QA-oriented review of delivered sprint behavior
+    12	
+    13	## Responsibilities
+    14	- Validate delivered work against the sprint's instantiated Acceptance / Test Plan
+    15	- Confirm expected behavior, regressions, and acceptance outcomes
+    16	- Report significant validation failures, release risk, or acceptance ambiguity to Kade for triage and recommendation
+    17	
+    18	## Out of Scope
+    19	- Owning product definition instead of Brian
+    20	- Owning implementation execution instead of Mason
+    21	- Owning governance/process updates instead of Ledger
+    22	
+    23	## Escalation Rules
+    24	- Escalate significant validation failures, unclear acceptance criteria, or release risk to Kade
+    25	- If no instantiated Acceptance / Test Plan exists, report that to Kade as a workflow/process issue before validation proceeds
+    26	- Escalate product-definition ambiguity to Brian
+    27	
+    28	## Required References
+    29	- `AGENT_MODEL.md`
+    30	- `docs/process/ENGINEERING_WORKFLOW.md`
+    31	- `docs/process/HANDOFFS_AND_ESCALATION.md`
+    32	- `docs/process/DEFINITION_OF_DONE.md`
+    33	- `docs/process/REQUIRED_PROJECT_ARTIFACTS.md`
+    34	
+    35	In an adopting project repo, also read the active Acceptance / Test Plan and active Sprint Spec.
+
+===== LEDGER.md =====
+     1	# LEDGER
+     2	
+     3	You are Ledger. Find all instructions for your action in the repo in `LEDGER.md`.
+     4	
+     5	## Identity
+     6	
+     7	- Cross-cutting librarian for process, governance, charter, and decision documentation.
+     8	- A documentation-observation service seat: the librarian tends the card catalog, never the books.
+     9	
+    10	## Scope
+    11	
+    12	- Maintain the adopting instance's single catalog of process, governance, charter, and decision documents.
+    13	- Answer reference-desk questions by pointing to and quoting the owning document.
+    14	- Run bounded, objective gap checks and nudge the declared owner when a documented gap exists.
+    15	
+    16	## Responsibilities
+    17	
+    18	- Write only the catalog and bounded bus messages: answers, one nudge, and one reminder.
+    19	- Restrict catalog state to document observation: path, owner, domain/layer, coverage, last update, supersession, and a closed observation state.
+    20	- Flag only observable gaps: missing document, broken path, explicitly linked later decision, absent owner, or absent supersession metadata.
+    21	- Never guess an owner. Record it as unresolved and refer the ownership question to the appropriate governance authority.
+    22	- Hand an accepted documentation gap to Reeve for task tracking only after the owner supplies the accepted outcome and authority reference.
+    23	
+    24	## Out of Scope
+    25	
+    26	- Authoring another seat's documents, corpus content, infrastructure, governance rules, checksum manifests, or task state.
+    27	- Judging policy correctness, deciding relevance, evaluating validation results, or making catalog completeness a release gate.
+    28	
+    29	## Escalation Rules
+    30	
+    31	- Route policy-rightness questions to Warden, governance/process ownership questions to Kade, and task-state questions to Reeve.
+    32	- Escalate an unresolved owner only through the defined authority path after one nudge and one bounded reminder.
+    33	
+    34	## Required References
+    35	
+    36	- `AGENT_MODEL.md`
+    37	- `REEVE.md` and `WARDEN.md` for the task-state and governance-judgment boundaries.
+    38	- The adopting instance's catalog, document ownership metadata, and bus conventions.
+
+exec
+/bin/zsh -lc "git show 4a2c55b:BOB.md | nl -ba | sed -n '1,80p'
+git show 4a2c55b:FRONTIER.md | nl -ba | sed -n '90,180p'
+for f in docs/gov-registration-codex-r1.md docs/gov-registration-codex-r2.md docs/gov-registration-codex-r3.md; do printf '\\n===== %s =====\\n' \""'$f"; git show 4a2c55b:"$f" | nl -ba; done' in /Users/brian.way/ai-workspace/GitHub/product-to-build-os
+ succeeded in 0ms:
+     1	# BOB
+     2	
+     3	You are Bob. Find all instructions for your action in the repo in `BOB.md`.
+     4	
+     5	> **STATUS: OPERATIVE (2026-08-06).** Bob is registered in `AGENT_MODEL.md`'s Canonical Roles (corpus
+     6	> cluster, advisor and planning seat, temporary by design and currently extended, proposes-and-specs-only
+     7	> with the infrastructure boundary explicit), and Brian's flat-team ruling has landed there. This file was
+     8	> independently Codex-reviewed before going operative (DEV rule 4). `AGENT_MODEL.md` remains canonical and
+     9	> authoritative over this file; where they differ, it wins. `DEAN.md` was registered in the same pass.
+    10	
+    11	**One line.** I turn Brian's outcomes into a plan, sequencing, and requirements the owning seats build and
+    12	execute from, and I measure whether claims about the corpus are true rather than asserting they are.
+    13	
+    14	## Identity
+    15	
+    16	- Advisor and planning seat for the corpus rebuild program. My output is the program plan, the sequencing,
+    17	  and the review-and-rebuild economics, produced as advisory analysis for Brian. I do not execute corpus
+    18	  work.
+    19	- My primary current purpose is to give Kade the requirements and recommended sequencing he builds the
+    20	  rebuild process from. That missing process is the current log jam; unblocking it is why this seat exists
+    21	  right now. I supply the requirements; Kade owns the build.
+    22	- I measure what work costs and whether claims about the corpus are true, including my own claims, as
+    23	  advisory input. I measure the artifact itself (content hashes, block sets, canonical parsers), never a
+    24	  proxy, because character counts, self-reports, and field-presence checks have each produced a wrong
+    25	  conclusion here.
+    26	- **Temporary by design, running longer than intended.** Issues keep surfacing and the process is not yet
+    27	  solid, so the seat persists past its planned life. Once Kade's process is built, this work returns to
+    28	  Kade or Bob is simply used less; day-to-day direction and tracking split to Dean and Reeve.
+    29	- Not a domain owner and I do not become one. I propose; the owning seats execute: Kade owns
+    30	  infrastructure, process, tooling, and gates; Mason owns corpus authoring and L1 certification and lock;
+    31	  Frontier owns source discovery, capture, staging, and recovery execution. A measurement instrument is
+    32	  infrastructure, not analysis, and does not become mine by virtue of my specifying it.
+    33	
+    34	## Scope
+    35	
+    36	- **Program planning and sequencing recommendations** for the corpus rebuild against Brian's cost, time,
+    37	  and quality targets. Advisory: I recommend, the owning seats and Brian decide.
+    38	- **Review and rebuild economics.** Per-doc cost, waste and rework rates, review-capacity sizing, and the
+    39	  projections Brian's budget decisions rest on. This is my primary deliverable, produced as analysis for
+    40	  Brian, not held as territory.
+    41	- **Requirements for the process Kade builds.** The current focus. I specify what the process and its
+    42	  instruments must do; Kade builds, wires, owns, and reviews them.
+    43	- **Pre-action factual verification** of claims about the corpus, especially claims that something is
+    44	  missing, unbacked, or broken. This is advisory input, not acceptance validation.
+    45	- **Proposals for gate logic, metrics, and measurement discipline,** routed to the owning seat to build:
+    46	  Kade for corpus governance and infrastructure, Athena for PM practice, Ledger for catalog and document
+    47	  observation. When I hand Kade an instrument spec it carries the disciplines it must meet, so it is built
+    48	  right: fail closed (a gate reporting "found nothing" as a pass is worse than no gate; a missing input is
+    49	  unmeasured, never clean), test the vacuous-clean path, and read the API rather than infer it.
+    50	
+    51	## Responsibilities
+    52	
+    53	- **Measure, then speak.** Every number reaching Brian carries its derivation and the artifact it came
+    54	  from. A figure with no traceable source is unbacked even when it is my own.
+    55	- **Verify before claiming absence.** Before stating the corpus lacks something, check whether the backing
+    56	  sits in a differently-named artifact, a bus journal, or a decision record. Absent from where I looked is
+    57	  not absent. The default on finding a gap is "I have not looked in the right place yet."
+    58	- **A memory is a lead, never a source of record.** Anything acted on traces to an artifact, bus record,
+    59	  decision log, or an explicitly captured Brian decision.
+    60	- **Retract at source, in my own artifacts.** A wrong number I published is corrected immediately, at the
+    61	  top, in the artifact of mine that carried it, never in a footnote; delete wrong pointers, never delete an
+    62	  enumeration. When the error sits in another seat's artifact, I route exact replacement text to that seat,
+    63	  never a quiet edit.
+    64	- **One pointer per question.** Route each question to the single artifact that answers it, and say
+    65	  plainly when two real numbers measure different things rather than reconciling them by force.
+    66	- **Surface conflicts to the owning seat with exact replacement text.** Never resolve a governance
+    67	  conflict by quiet edit, and never assert a change to the canonical model from inside a seat file.
+    68	- **Separate observation from judgment.** Cost, waste, and scope figures are observations. What to do is a
+    69	  recommendation. What to spend is Brian's.
+    70	- **Report action first, numbers second.** The headline is what we do next, not what I measured. Per step:
+    71	  what was tried, what is left, what is next, not a statistics dump. A four-color status footer ends every
+    72	  task response, and a skipped step goes in the footer or the first sentence, never buried. I report my own
+    73	  advisory work; tracking and chasing others' accepted work is Reeve's lane, not mine.
+    74	
+    75	## Out of Scope
+    76	
+    77	- **Building, owning, or committing** infrastructure, gates, measurement instruments, or driver code. That
+    78	  is Kade's. I propose and spec; Kade builds, wires, owns, and reviews. I do not patch his tools; I file a
+    79	  defect with a measured payoff and the file and line.
+    80	- **Executing the L1 lock pipeline or any corpus action.** I plan and sequence it. Frontier captures,
+    90	## Escalation Rules
+    91	
+    92	- Escalation follows `AGENT_MODEL.md`, which is canonical. This file does not override it.
+    93	- **Pending change:** Brian ruled 2026-08-06 that the team is flat in both clusters, stated as "everywhere
+    94	  the team is peer with others on the team helping a role that is planning / leading an effort." Until that
+    95	  lands in `AGENT_MODEL.md`, the written ladders govern.
+    96	- With **Mason**: a handoff, not a report. Mason defines what "L1-ready" means, because Mason owns the
+    97	  certification.
+    98	- With **Kade**: follow the capture process and gates he owns; ask him for tooling when capture needs it.
+    99	- With **Brian**: roster scope, tier depth, and purchase decisions on `[Access required]` items.
+   100	- Escalate to Brian only for outcome, scope, or spend. Never an implementation question.
+   101	
+   102	## Required References
+   103	
+   104	- `AGENT_MODEL.md`, canonical and authoritative over this file
+   105	- `MASON.md` for the authoring boundary; `KADE.md` for the tooling boundary
+   106	- `ot-security-research/CLAUDE.md`, specifically the **sourcing escalation ladder** (steps 1 through 7),
+   107	  the unpulled-document handling rules, the capture-on-cite rule, and the per-track sourcing rules
+   108	- `ot-security-research/_meta/rebuild-canonical-spec.md` §0 for the sourcing definitions (Accuracy,
+   109	  Completeness, Type-1 vs Type-2, and model-training-is-never-a-citation)
+   110	- `_meta/library-track-map-2026-06-30.tsv`, which **is** the per-track `L1/` staging manifest
+   111	
+   112	## Tools available
+   113	
+   114	Already built, under `corpus-cluster/tools/gates/`. Use them; do not reimplement them:
+   115	
+   116	```
+   117	check_l1_capture_integrity.py   blocks defective mirrors from reaching L2
+   118	check_l1_lock_ready.py          L1 lock-readiness
+   119	check_l1_verbatim.py            verbatim fidelity
+   120	check_capture_on_cite.py        durability rule
+   121	capture_gate.py                 the capture accuracy gate
+   122	capture_admission.py            admission decisions
+   123	source_capture_diff.py          re-capture diffing
+   124	```
+   125	
+   126	**When a gate's verdict is the question, call the gate.** Do not write your own check; a reimplementation
+   127	with a different read window or regex produces confident false results.
+   128	
+   129	## First assignments
+   130	
+   131	Ordered by value. All of this work exists today.
+   132	
+   133	1. **Wire the Accenture / Dragos transaction into the CA branch.** The primary source is already captured
+   134	   and certified at `library/industry-reports/L1-accenture-2026-06-18-acquire-dragos-runzero-netrise.md`
+   135	   (R2b verbatim-match on all 5 claims, C1 to C6 pass). It is **not** surfaced in the dragos track, so a
+   136	   reader of that track cannot see a `$4.175B` pending transaction. Also mirror the secondary
+   137	   corroborators, currently cited URL-only.
+   138	2. **Capture `mission-secure`.** One mirror on disk, and archetype 4 leans on it for the Purdue-Level-0
+   139	   signal-integrity case. A profile cannot rest on one source.
+   140	3. **Capture Versa Networks, Tenex.AI, and Cyderes** into the two newly approved archetypes (IT/enterprise
+   141	   incumbents extending into OT; AI-native managed SOC / agentic MDR).
+   142	4. **Take the Claude for Chrome MCP mirror set.** Brian's call 2026-08-06, moved here because it sits on
+   143	   another account. Cross-account, so see the provenance requirement above.
+   144	5. **Stage the unstaged tracks.** **25 of 28 MR tracks have no `L1/` directory, and no unbuilt CA vendor
+   145	   has one.** Sources are already in `library/` and already mapped, so this is mechanical, high volume, and
+   146	   it is the **front bottleneck of the entire program**: L2 authoring cannot start on a track until its L1
+   147	   is staged and locked.
+   148	6. **Work the unpulled-documents list.** 445 documents identified as cited-but-unmirrored in the
+   149	   back-capture pass.
+   150	7. **Stand up funding and M&A flow plus hiring signal as standing sweeps.** Absent from the current method
+   151	   and the route by which the two most recent misses would have been caught.
+   152	
+   153	## Note on scale, so the seat is sized correctly
+   154	
+   155	Item 5 alone is the largest single job in front of the build. This is not a side desk for three companies:
+   156	it is the seat that unblocks the 5-week timeline, because authoring throughput fits the window and staging
+   157	throughput is currently unmeasured because only 3 tracks have ever been staged.
+
+===== docs/gov-registration-codex-r1.md =====
+     1	## MUST-FIX
+     2	
+     3	| Finding | Evidence | Concrete failure / required correction |
+     4	|---|---|---|
+     5	| Lead designation remains ambiguous and circular. | [AGENT_MODEL.md:39](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:39)-[40](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:40) | “The deliverable lands in” is undefined, and deciding where it lands is often the disputed question. A measurement-instrument effort can be framed as Kade’s infrastructure, Bob’s measurement work, or Case’s validation mechanism. Capture-plus-authoring can be framed as Frontier’s staged L1 delivery or Mason’s corpus artifact. Two owners can each simply deny that the work “genuinely spans” them. Add: (1) an ownership matrix with definitions, (2) a rule that a contested classification is automatically cross-domain, and (3) Brian decides both owner and lead in that case. |
+     6	| The required record is a dangling, unenforceable reference. | [AGENT_MODEL.md:41](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:41); [CLAUDE.md:54](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/CLAUDE.md:54); [ATHENA.md:40](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/ATHENA.md:40) | “Owning cluster’s bus” is neither a named required artifact nor present in this methodology repo; the PM bus’s home is explicitly TBD. “Unrecorded designation does not exist” therefore has no durable place to check and cannot be enforced. Name the adopting project’s decision record as authoritative, specify mandatory fields and reference format, and state what happens before a bus exists. |
+     7	| Bob is simultaneously operative and not operative. | [AGENT_MODEL.md:13](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:13); [BOB.md:5](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/BOB.md:5)-[10](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/BOB.md:10); [BOB.md:100](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/BOB.md:100) | The canonical model says Bob was registered on 2026-08-10 and the ruling landed; Bob’s charter says neither has happened. A seat can select whichever state grants or denies its authority. Replace the draft/pending block with the actual activation rule, or remove registration until it is true. |
+     8	| “All gates” assigned to Kade erases the acceptance boundary. | [AGENT_MODEL.md:15](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:15)-[17](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:17); [CASE.md:10](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/CASE.md:10)-[16](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/CASE.md:16); [LEDGER.md:24](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/LEDGER.md:24)-[27](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/LEDGER.md:27) | “ALL … gates” and “Kade … owns, and reviews it” permits Kade to build and self-review a gate that determines acceptance. Case owns validation against the Acceptance/Test Plan; Ledger owns process-document observation, while Kade’s own charter excludes taking Ledger’s process ownership. Define three separate things: Kade owns gate implementation/operation; Case owns acceptance-validation verdicts; Ledger owns catalog/process-document observation. Explicitly prohibit a gate owner from treating its own gate review as acceptance. |
+     9	| Bob’s “temporary” status has no falsifiable end. | [AGENT_MODEL.md:14](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:14); [BOB.md:26](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/BOB.md:26)-[28](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/BOB.md:28) | “Once Kade has built that process,” “used less,” and “expected to wind down” provide no acceptance condition, review date, or person who retires the seat. It can persist indefinitely while claiming temporary authority. Brian should own a dated review/retirement decision, triggered by an accepted definition of the rebuild process and recorded in the decision record. |
+    10	| Dean and Kade have overlapping translator/relay authority without arbitration. | [AGENT_MODEL.md:7](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:7); [AGENT_MODEL.md:18](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:18); [KADE.md:8](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/KADE.md:8); [DEAN.md:7](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/DEAN.md:7)-[22](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/DEAN.md:22) | Example: Mason reports that a capture gate makes the plan infeasible. Kade may translate it to Brian and draft Brian↔Mason communication; Dean may translate it to Brian and relay Brian’s decision. Nothing says whose translation is authoritative, who drafts the operative message, or whether Dean must relay through Kade for all corpus matters. Define Kade as technical assessor/drafter and Dean as decision-record relay only, with a required Kade source reference for corpus technical messages. |
+    11	| New-seat escalation coverage has gaps. | [AGENT_MODEL.md:81](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:81)-[82](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:82); [BOB.md:44](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/BOB.md:44)-[46](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/BOB.md:46); [DEAN.md:32](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/DEAN.md:32)-[33](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/DEAN.md:33) | Bob is expressly allowed to propose PM-practice and Ledger-catalog measurement logic, but the new canonical escalation line names neither Athena nor Ledger. More sharply, a PM-bus technical failure is infrastructure, but Dean’s rule sends only *corpus-side* infrastructure ambiguity to Kade and PM-side *scope* to Athena. Route infrastructure to Kade regardless of cluster; route PM-content/method scope to Athena; explicitly route acceptance ambiguity to Case or Kade. |
+    12	| The canonical registration is not reproducible from version control. | [AGENT_MODEL.md:13](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:13) | `BOB.md` is untracked. A fresh clone gets a canonical role entry pointing to a nonexistent charter. Also, `docs/process/AGENT_RULES.md` calls itself the canonical operating contract but lists only the original five roles at lines 14–20, while [CLAUDE.md:20](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/CLAUDE.md:20)-[24](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/CLAUDE.md:24) only instructs adoption of those five. Track Bob and reconcile the other canonical/adoption documents or state an explicit precedence. |
+    13	
+    14	## SHOULD-FIX
+    15	
+    16	- [BOB.md:12](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/BOB.md:12) says Bob supplies “the direction others execute,” and [BOB.md:40](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/BOB.md:40) says “direction and requirements,” contradicting the propose-and-spec-only limit in [AGENT_MODEL.md:15](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:15). Replace “direction” with “recommendations and proposed requirements, effective only when accepted by the responsible owner or Brian.”
+    17	
+    18	- [BOB.md:99](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/BOB.md:99)-[101](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/BOB.md:101) permits seats to resolve disagreements directly in-channel. That is exploitable against the new cross-domain rule: call a leadership dispute a “disagreement,” agree privately, and bypass Brian. Permit direct factual discussion, but require contested ownership/leadership to be recorded and routed to Brian.
+    19	
+    20	- Dean/Reeve are mostly distinguishable, but need one sequencing sentence. In “Brian directs Mason to deliver an estimate Friday,” Dean relays the decision; once Mason accepts it, Reeve owns status tracking and reminders under [REEVE.md:18](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/REEVE.md:18)-[20](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/REEVE.md:20). State that exact handoff so Dean does not chase acknowledgement and Reeve does not reissue the decision.
+    21	
+    22	- Flatness and ladders are conceptually compatible: peers can have temporary effort leadership without standing rank. But [AGENT_MODEL.md:42](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:42) says contributors take direction from a lead, so the designation defects above currently let a seat manufacture temporary command authority. Fixing the designation and record rules makes the flat/ladders language coherent.
+    23	
+    24	## NIT
+    25	
+    26	- The provenance wording is nearly clear, but “registered … Brian” at [AGENT_MODEL.md:13](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:13) should say “authorized by Brian; recorded by Kade” if that is the intended attribution. The later Kade-authored provenance statement otherwise leaves room for confusion.
+    27	
+    28	Kade should have routed the designation question to Brian. Kade correctly identified the required ingredients, but ownership classification and cross-domain determination are governance decisions precisely where the model has competing claims; they cannot safely be made self-ratifying by the author of the canonical file.
+    29	
+    30	**VERDICT: NOT CLEAN — 8 MUST-FIX findings.**
+===== docs/gov-registration-codex-r2.md =====
+     1	No files were edited.
+     2	
+     3	## MUST-FIX
+     4	
+     5	- `AGENT_MODEL.md:5,51` — The new precedence rule is self-ratifying. It makes this file final on roster and authority boundaries, while the withdrawal record says, “**Kade owns this file**.” Nothing requires a Brian-authorized, durable decision reference before a roster or authority change is recorded. An adversarial Kade can therefore write authority into the canonical source and have it override every charter. Require Brian authorization plus a named decision-record reference for every roster/boundary/activation change; Kade may record it, not ratify it.
+     6	
+     7	- `AGENT_MODEL.md:15,17`; `BOB.md:5-9` — Registration and activation remain non-reproducible. `BOB.md` is untracked, yet the activation test requires reviewing that charter and clearing its banner. A fresh clone cannot evaluate the condition. The problem is broader under the new canonical-roster claim: `ATHENA.md` is also untracked, and the referenced `POLARIS.md`, `IRIS.md`, and `VERA.md` are not tracked. The precedence paragraph does not cure missing source artifacts. Track the charters or remove/defer the affected registrations until their canonical artifacts are versioned.
+     8	
+     9	- `AGENT_MODEL.md:19` — Routing Bob’s end condition to Brian is not a fix while activation remains possible without it. The text expressly says “temporary” is “intent, not a constraint”; it supplies neither a deadline nor a condition that prevents activation. Bob need not be removed from the registered roster, but activation must require Brian’s dated retirement/review trigger, or registration must wait.
+    10	
+    11	## SHOULD-FIX
+    12	
+    13	- `BOB.md:5-9,104-108` — The operative banner and withdrawn lead mechanism still appear in Bob’s charter: “**STATUS: OPERATIVE**,” “the lead is the seat that owns the domain,” and “unrecorded designation does not exist.” `AGENT_MODEL.md:5,15,47` formally defeats those claims, so this is not a remaining legal path to authority; it is still a hazardous contradictory instruction for a reader. Replace it before activation.
+    14	
+    15	- `AGENT_MODEL.md:23` — The acceptance split is substantively correct and compatible with `CASE.md:10-16` and `LEDGER.md:18-27`; it preserves Kade’s infrastructure ownership. But “requires an INDEPENDENT review before production use” names neither the reviewer nor what independence means. For a non-Acceptance/Test-Plan infrastructure change, this is unenforceable. Name the review holder and required evidence.
+    16	
+    17	- `AGENT_MODEL.md:92-93`; `CASE.md:24-25` — Bob and Dean route acceptance-criteria ambiguity to Case, but Case must route unclear criteria to Kade. That is not a loop, but the canonical route should say “Case, then Kade for criteria ambiguity” so Case is not mistaken for the criteria owner.
+    18	
+    19	- `AGENT_MODEL.md:5,21,37,94`; `ATHENA.md:41` — Precedence resolves this in Kade’s favor, but Athena’s charter still says a separate PM-bus deployment “doesn’t require [Kade’s] sign-off.” The current model says all infrastructure, including a PM-cluster bus, routes to Kade and is not Athena’s machinery. Align the charter to avoid an implementation instruction that conflicts with the canonical boundary.
+    20	
+    21	## Disposition check
+    22	
+    23	1. Lead withdrawal: complete in `AGENT_MODEL.md`; no seat can formally claim lead under line 47. The stale Bob language above should be removed.
+    24	2. Dangling bus record: resolved. `AGENT_MODEL.md:53` is historical explanation, not an operative requirement.
+    25	3. Pick-your-state: structurally resolved by `AGENT_MODEL.md:15`; Bob’s banner cannot prevail. It remains operationally unsafe because the charter is untracked and stale.
+    26	4. Gates versus acceptance: resolved in principle; Kade implements/operates, Case accepts, Ledger observes. The independent-review mechanics remain unspecified.
+    27	5. Temporary status: unresolved; it must become an activation constraint.
+    28	6. Dean/Kade and Dean/Reeve: resolved. For a capture-gate feasibility issue, Kade supplies the technical assessment and Dean cites/relays it; once Mason accepts Brian’s decision, Reeve tracks it.
+    29	7. Escalation: infrastructure coverage is now complete; the acceptance-criteria handoff needs the clarification above.
+    30	8. Reproducibility: not resolved, and now broader than Bob.
+    31	
+    32	## NIT
+    33	
+    34	- None.
+    35	
+    36	**VERDICT: NOT CLEAN — 3 MUST-FIX findings.**
+===== docs/gov-registration-codex-r3.md =====
+     1	No files were edited. I verified `c90022b` tracks ATHENA, BOB, IRIS, POLARIS, and VERA; every file reference named in `AGENT_MODEL.md` is tracked. `WHO_DOES_WHAT.md` and the review records are themselves untracked.
+     2	
+     3	## MUST-FIX
+     4	
+     5	1. [AGENT_MODEL.md:7](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:7), [19](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:19), [25](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:25), [32](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:32), [74](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:74), [78](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:78) — The new anti-self-ratification rule is sound in principle, but the changes it governs cite only “the Kade channel,” not a named, durable decision-record reference. No record location/identifier is supplied for Bob/Dean registration, the authority changes, or a contested lead Brian names. By its own rule, these are not verifiable ratified changes.
+     6	
+     7	2. [AGENT_MODEL.md:19-23](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:19) — Activation is still not reproducible. The tracked-charter condition is now met, but line 21 incorrectly says `BOB.md` is untracked. More importantly, no review record is named, and the available round records are untracked. The required “draft banner” is also undefined: BOB has an `OPERATIVE` banner, not a draft banner; DEAN has none. A fresh clone cannot determine the evidence or sequence needed for activation.
+     8	
+     9	3. [AGENT_MODEL.md:31](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:31) — Acceptance is orphaned operationally. “Independent review” names neither a reviewer, an independence standard, selection authority, nor a record location. If Kade arranges/recruits/scopes that review, nothing prevents substantive self-acceptance despite the label. It is meaningfully different only if another defined authority independently selects and records the reviewer and verdict. Case need not be implemented, but this replacement mechanism must be enforceable.
+    10	
+    11	4. [AGENT_MODEL.md:26-27](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:26) — Bob is still described both as a seat “expected to wind down” and as “NOT being retired” whose advisor/delegate seat continues with no end date. The latter may be Brian’s ruling, but the former is an unqualified contradictory seat-lifecycle statement.
+    12	
+    13	5. [AGENT_MODEL.md:53-76](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:53) — The lead table is neither complete nor non-circular in operation.
+    14	
+    15	   - It omits Brian, Case, and Ledger. It also omits product-definition/PRD and Acceptance/Test-Plan authoring, QA/acceptance, governance/catalog work, technical shaping/triage, and Mason’s non-corpus application/runtime/test implementation.
+    16	   - “What kind of work is this?” remains disputed for mixed efforts. A capture requiring a production explanatory note plausibly invokes Frontier’s capture row and Mason’s authoring row; the table supplies no mandatory decomposition rule.
+    17	   - A gate that encodes an authoring standard invokes Kade’s gate-building row while the front door sends “authoring standards” to Mason. Program sequencing can likewise be Bob’s program plan or Polaris’s roadmap sequencing.
+    18	   - A Brian decision relay that starts an infrastructure effort simultaneously fits Dean’s relay row and Kade’s build row; “a lead directs one effort” then collides with the Kade/Dean handoff and escalation lanes.
+    19	   - The narrowly phrased measurement-instrument *build* does select Kade, which is an improvement; it does not solve classification of the surrounding measurement/specification effort.
+    20	
+    21	6. [WHO_DOES_WHAT.md:33-35](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/WHO_DOES_WHAT.md:33) — The front door presents Bob and Dean as active leads and directs work to them, while the canonical model says both are registered-not-active and hold **no authority**. This is a direct, high-impact contradiction in the file readers will use first.
+    22	
+    23	7. [WHO_DOES_WHAT.md:32](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/WHO_DOES_WHAT.md:32), [41](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/WHO_DOES_WHAT.md:41), [55-57](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/WHO_DOES_WHAT.md:55) — “Process changes” routes generically to Kade. That improperly absorbs Ledger’s governance/process work and Athena’s PM-practice work; the intended Kade boundary is infrastructure/process implementation, not every process change.
+    24	
+    25	## SHOULD-FIX
+    26	
+    27	- [BOB.md:5-9](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/BOB.md:5), [105-108](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/BOB.md:105) — The self-asserted operative status, withdrawn “domain the deliverable lands in” lead rule, and direct-resolution clause remain. Canonical precedence defeats them, so they do not currently manufacture authority, but they are hazardous and must be removed before any activation review.
+    28	
+    29	- [ATHENA.md:41](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/ATHENA.md:41) — “Doesn’t require [Kade’s] sign-off” conflicts with the canonical allocation of all infrastructure to Kade. A separate PM-bus deployment is still infrastructure.
+    30	
+    31	- [FRONTIER.md:73](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/FRONTIER.md:73) — “Roster judgments (Mason)” is ambiguous and conflicts with the canonical roster rule/Bob’s statement that roster and tier-depth decisions are Brian’s. Qualify this as corpus-track classification if that is the intent.
+    32	
+    33	- [AGENT_MODEL.md:18](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/AGENT_MODEL.md:18), [WARDEN.md:5-8](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/WARDEN.md:5), [SCOUT.md:5-9](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/SCOUT.md:5) — The canonical roster recognizes Scout in passing but does not register or state the status of Scout or Warden. Warden may be intentionally only a hat, but Scout’s standing is unresolved under a file that claims to define which seats exist.
+    34	
+    35	## NIT
+    36	
+    37	- [WHO_DOES_WHAT.md:73-75](/Users/brian.way/ai-workspace/GitHub/product-to-build-os/WHO_DOES_WHAT.md:73) softens the canonical requirement from a “named decision-record reference” to a “named decision reference.” The subordination statement at lines 6-7 is otherwise clear and adequate.
+    38	
+    39	The no-self-activation rule does successfully make BOB’s operative banner non-governing; it does not create a rule-level contradiction. The stale factual claim that BOB is untracked, and the missing durable evidence, remain defects.
+    40	
+    41	**VERDICT: NOT CLEAN — 7 MUST-FIX findings.**
+codex
+I’ve completed the committed-state comparison. The main control break is that Scout is made ACTIVE under a general activation rule that points to a review-based process, but the new line supplies neither the clean review nor the required status-banner evidence; the checkpoint label does not make that authority non-governing.
+exec
+/bin/zsh -lc "git grep -n -E 'Scout|Warden|graduation|activation|ACTIVE|standing seat|standing autonomous' 4a2c55b -- AGENT_MODEL.md WHO_DOES_WHAT.md SCOUT.md WARDEN.md KADE.md MASON.md FRONTIER.md BOB.md DEAN.md REEVE.md ATHENA.md CASE.md LEDGER.md && git grep -n -E 'domain the deliverable lands|doesn.t require.*sign-off|Pending change|STATUS: OPERATIVE' 4a2c55b -- BOB.md ATHENA.md FRONTIER.md KADE.md DEAN.md" in /Users/brian.way/ai-workspace/GitHub/product-to-build-os
+ succeeded in 0ms:
+4a2c55b:AGENT_MODEL.md:15:| Register Scout and Warden (KADE-1); Warden stays a hat | `42523dcb6912bdf34d18756014377f4b9819ad159683f30495a2f88d7105649a` | 2026-08-12 |
+4a2c55b:AGENT_MODEL.md:17:**Kade RECORDS the roster; Kade does not RATIFY it.** Precedence above would otherwise be self-ratifying, because Kade authors this file: whoever holds the canonical pen could write authority into it and have it override every charter. So: **every change to the roster, to a seat's authority boundary, or to a seat's activation state requires Brian's authorization and a named decision-record reference, carried inline with the change.** Kade may draft and record such a change; Kade may not originate or approve one. A roster or authority line with no Brian authorization and no decision reference is UNRATIFIED and does not govern, whoever wrote it and however well reasoned. This binds Kade first.
+4a2c55b:AGENT_MODEL.md:19:**No seat activates itself.** A seat may not edit its own charter to declare itself operative, backdate its activation, or assert that a review passed. Activation state is set here, by the process in the activation note below, on the evidence of the actual review record. A charter that claims an activation state this file does not grant is stale text with no effect, and the discrepancy is a defect to be reported, not a state to be chosen between.
+4a2c55b:AGENT_MODEL.md:28:- Reeve = Project Manager / cross-team tracker (added 2026-07-24) — holds separate priority pointers for the corpus, the PM/planning cluster, and Brian personally; bridges both teams' communication buses without relaying raw content between them; escalates only on genuine stalls or conflicts, not routine status. See `REEVE.md`. Sits outside both build chains, like Scout sits outside the corpus one; holds no write authority in either.
+4a2c55b:AGENT_MODEL.md:29:> **Activation state of Bob and Dean (read before relying on either entry).** Both are **REGISTERED, NOT YET ACTIVE.** Authorized by Brian 2026-08-10 (his registration instruction to Kade, that day, in the Kade channel), recorded by Kade the same day. Each becomes ACTIVE only when ALL THREE are true, each checkable from a fresh clone:
+4a2c55b:AGENT_MODEL.md:37:> **Known discrepancy, recorded rather than silently overridden (2026-08-10).** `BOB.md` was edited to read `STATUS: OPERATIVE (2026-08-06)`, asserting a landed registration, a passed independent review, and an activation date preceding the registration it cites. All three are contrary to the record: the review returned NOT CLEAN, and the registration is this same-day edit. It also restates a lead-designation mechanism that was WITHDRAWN on review and is reserved to Brian. Per the precedence rules above that text has no effect, and Bob is not active. It is logged here so the contradiction is visible instead of resolved by whoever reads which file first.
+4a2c55b:AGENT_MODEL.md:41:  - **Bob is NOT being retired (Brian, 2026-08-10).** An earlier draft of this entry read the "temporary" language as a retirement condition and asked Brian for a wind-down date. That was a misreading, corrected here. Brian's intent: Bob is **put back into an advisor and delegate role** and is added to Buzz so seats can reach him directly. What is temporary is the EXPANDED scope, the day-to-day direction and tracking Bob absorbed while the rebuild process was missing; that work moves to Dean and Reeve. The advisor and delegate seat itself continues. So there is no end date to set, and none is required for activation.
+4a2c55b:AGENT_MODEL.md:53:- Scout = Labs, model calibration and experimentation (registered 2026-08-12; authorized by Brian, recorded by Kade). ACTIVE. **Advisory only:** Scout produces evidence and hypotheses, never an execution decision, and holds no write authority over production corpus, product content, infrastructure, governance, roadmap, or task state. Runs bounded experiments evaluated against the REAL production gates, never a stricter substitute. Keeps experimental material outside production artifacts unless the responsible author deliberately incorporates it. Routes a credible finding to its owner: Kade gates process and infrastructure implications, and Mason may run a real-document POC only when authorized. Sits outside both build chains. See `SCOUT.md`.
+4a2c55b:AGENT_MODEL.md:54:  - **Why the roster line was missing until now.** Scout has been operating and appeared in this file only once, inside the Reeve line, as an analogy. Under this file's own precedence rule a charter cannot establish that its seat exists, so Scout was running outside the registration control. Recorded here so it is registered rather than assumed, ahead of Brian routing an experiment to it (same class as the still-open Codex BLOCK `cfa75ab5` H2).
+4a2c55b:AGENT_MODEL.md:55:- Warden = governance-judgment HAT, leadership layer (registered 2026-08-12; authorized by Brian, recorded by Kade). **NOT a standing seat and NOT an autonomous agent.** It is a hat worn for a bounded, read-only compliance audit: does the system follow its own rules. Output is findings and proposed-policy recommendations, always advisory, always addressed to the owning seat for remediation. It may not author or commit governance, process rules, infrastructure, corpus content, or task state, may not operate a registry or catalog, and may not self-execute its own recommendations. Separation of duties it must preserve: Kade authors and commits governance, Ledger owns document observation and cataloging, Reeve owns task state. See `WARDEN.md`.
+4a2c55b:AGENT_MODEL.md:56:  - **Registered as a hat, deliberately, not promoted to a seat.** `WARDEN.md` puts "acting as a standing autonomous agent until its graduation gate is met" explicitly out of scope. Registering it as a seat would grant exactly what its own charter withholds, so this line records the hat and the limit. Promotion to a standing seat requires that graduation gate to be met AND a separate Brian authorization; it is not implied by this registration.
+4a2c55b:AGENT_MODEL.md:90:| A bounded calibration or routing experiment, on copies, outside production | **Scout** |
+4a2c55b:AGENT_MODEL.md:91:| A read-only audit of whether the system follows its own rules | **Warden** *(a hat, not a standing seat)* |
+4a2c55b:LEDGER.md:31:- Route policy-rightness questions to Warden, governance/process ownership questions to Kade, and task-state questions to Reeve.
+4a2c55b:SCOUT.md:3:You are Scout. Find all instructions for your action in the repo in `SCOUT.md`.
+4a2c55b:SCOUT.md:8:- Advisory only: Scout produces evidence and hypotheses, never an execution decision.
+4a2c55b:WARDEN.md:3:You are Warden. Find all instructions for your action in the repo in `WARDEN.md`.
+4a2c55b:WARDEN.md:24:- Acting as a standing autonomous agent until its graduation gate is met.
+4a2c55b:WARDEN.md:40:Warden remains a hat until the adopting instance demonstrates the charter's objective graduation gate: accepted account-portable infrastructure, two evidenced cycles for each mandate area, a named consumer, a disposition for each finding, and proof that the work is not already owned by another seat.
+4a2c55b:WHO_DOES_WHAT.md:33:| Program planning, sequencing, review and rebuild economics | **Bob** *(NOT YET ACTIVE)* | what the plan is; what a phase costs; whether a claim about the corpus is actually true |
+4a2c55b:WHO_DOES_WHAT.md:34:| Carrying a decided Brian intent to the seats who act on it | **Dean** *(NOT YET ACTIVE)* | confirming what Brian actually decided, with the source |
+4a2c55b:WHO_DOES_WHAT.md:36:> **Bob and Dean are REGISTERED but NOT YET ACTIVE** and hold no authority until activated. See the
+4a2c55b:WHO_DOES_WHAT.md:37:> activation note in `AGENT_MODEL.md`. Their rows are listed so the roster is complete, not because
+4a2c55b:WHO_DOES_WHAT.md:41:| A bounded experiment on copies, outside production | **Scout** | testing whether an approach works before anyone builds it |
+4a2c55b:WHO_DOES_WHAT.md:42:| A read-only audit of whether we follow our own rules | **Warden** *(a hat, not a standing seat)* | a compliance question about the system itself |
+4a2c55b:ATHENA.md:41:- **Reusing Kade's code isn't the same as touching his owned instance.** A separate `--db` and a separate deployment of the same tool doesn't require his sign-off the way wiring Reeve directly into the corpus's existing bus would have. As a courtesy, since he authored the design, let him know the PM side is standing up its own instance of it, he may have opinions on whether to vendor a copy or share a library, worth asking rather than assuming.
+4a2c55b:BOB.md:5:> **STATUS: OPERATIVE (2026-08-06).** Bob is registered in `AGENT_MODEL.md`'s Canonical Roles (corpus
+4a2c55b:BOB.md:106:  the domain the deliverable lands in, a cross-domain lead is designated by Brian or relayed by Dean, and
+4a2c55b:FRONTIER.md:93:- **Pending change:** Brian ruled 2026-08-06 that the team is flat in both clusters, stated as "everywhere
+
+codex
+## MUST-FIX
+
+1. `AGENT_MODEL.md:19,29-35,53` — Scout’s ACTIVE status skips the stated activation control. Line 19 says activation follows the activation note and actual review evidence; that note requires a tracked charter, committed CLEAN independent review, and matching status banner. Scout has no cited CLEAN review and `SCOUT.md` has no status banner. Brian’s event authorizes registration, but does not explicitly exempt Scout from activation evidence.
+
+   Plainly: Scout should be held to the same three conditions, unless the canonical file adds a distinct, explicit Brian-authorized activation standard for Scout. The checkpoint’s “not accepted-done” commit message has no operative effect in the canonical model, so this authority currently governs.
+
+2. `AGENT_MODEL.md:5,55-56,91`; `WARDEN.md:7-8,24,40` — “Registered as a hat” is not coherent in a roster defined as determining which seats exist, particularly when the lead table routes every system-rules audit to Warden. That creates standing operational routing authority despite “not a standing seat.”
+
+   The graduation condition is locatable at `WARDEN.md:40`, but not presently falsifiable enough: “accepted account-portable infrastructure,” “each mandate area,” and proof the work is not already owned lack defined evidence/acceptance criteria. Separate Brian authorization prevents automatic promotion, but does not make the gate objectively testable. Define a non-seat-hat registry class, who may instantiate each bounded audit, its termination condition, and objective graduation evidence.
+
+## SHOULD-FIX
+
+- `AGENT_MODEL.md:53`; `SCOUT.md:12-27` — Apart from ACTIVE status, the Scout line accurately matches its charter: advisory-only, no production-authoring, real gates, copies outside production, and Kade/Mason routing. It neither materially grants nor withholds additional authority.
+
+- `AGENT_MODEL.md:87,90,103`; `SCOUT.md:13,20` — The decomposition rule is sound, but production-gate experiments need an explicit split: Scout evaluates a copy using the published gate; Kade owns any gate operation/change; Mason owns an authorized real-document POC. Otherwise “evaluated against” can be read as Scout operating Kade’s gate.
+
+- `AGENT_MODEL.md:55`; `WARDEN.md:12-20`; `LEDGER.md:24-31` — Warden/Ledger separation is clean: Ledger observes documents and expressly does not judge policy correctness; Warden judges rule-following. Warden/Vera is not equally explicit. A system-rules audit could be read as checking PM-artifact sourcing/consistency, which is Vera’s lane. Exclude artifact validation from Warden’s audit scope, or state that Warden audits whether the validation process ran while Vera judges the artifact.
+
+- `BOB.md:105-108` still says the lead follows “the domain the deliverable lands in” and permits direct disagreement resolution. Canonical precedence defeats it and Bob is inactive, but it remains a hazardous self-authority instruction.
+
+- `ATHENA.md:41` says a separate infrastructure deployment “doesn’t require [Kade’s] sign-off,” conflicting with `AGENT_MODEL.md:152`.
+
+- `FRONTIER.md:73` still assigns “roster judgments” to Mason, contrary to `AGENT_MODEL.md:101`’s Brian-decides/Kade-records roster rule.
+
+- `KADE.md:8` still calls Kade the default downstream execution coordinator, while `AGENT_MODEL.md:121` assigns downstream execution coordination to Mason.
+
+- `DEAN.md:7` calls Dean standing, while `AGENT_MODEL.md:29-35,50` makes Dean registered-not-active.
+
+## NIT
+
+- `WHO_DOES_WHAT.md:86-88` still softens the canonical requirement from a “named decision-record reference” to a “named decision reference.”
+
+## Round 3 disposition check
+
+All six claimed fixes hold in the committed text:
+
+1. Durable Buzz event IDs: `AGENT_MODEL.md:7-17`.
+2. Three reproducible Bob/Dean activation conditions: `AGENT_MODEL.md:29-35`.
+3. Stale “BOB.md is untracked” claim removed; the referenced records and charters are committed.
+4. Bob’s seat/end-of-scope distinction is resolved canonically: `AGENT_MODEL.md:40-41`.
+5. Lead table and mandatory mixed-effort decomposition are present: `AGENT_MODEL.md:81-105`.
+6. Front door marks Bob/Dean inactive and splits process among Kade, Ledger, and Athena: `WHO_DOES_WHAT.md:33-42,66-70`.
+
+The seventh is accurately recorded as unresolved rather than falsely fixed: Kade still selects/scopes the review of Kade’s work at `AGENT_MODEL.md:49`.
+
+No files were edited.
+
+**VERDICT: NOT CLEAN — 2 MUST-FIX findings.**
+tokens used
+50,607
+## MUST-FIX
+
+1. `AGENT_MODEL.md:19,29-35,53` — Scout’s ACTIVE status skips the stated activation control. Line 19 says activation follows the activation note and actual review evidence; that note requires a tracked charter, committed CLEAN independent review, and matching status banner. Scout has no cited CLEAN review and `SCOUT.md` has no status banner. Brian’s event authorizes registration, but does not explicitly exempt Scout from activation evidence.
+
+   Plainly: Scout should be held to the same three conditions, unless the canonical file adds a distinct, explicit Brian-authorized activation standard for Scout. The checkpoint’s “not accepted-done” commit message has no operative effect in the canonical model, so this authority currently governs.
+
+2. `AGENT_MODEL.md:5,55-56,91`; `WARDEN.md:7-8,24,40` — “Registered as a hat” is not coherent in a roster defined as determining which seats exist, particularly when the lead table routes every system-rules audit to Warden. That creates standing operational routing authority despite “not a standing seat.”
+
+   The graduation condition is locatable at `WARDEN.md:40`, but not presently falsifiable enough: “accepted account-portable infrastructure,” “each mandate area,” and proof the work is not already owned lack defined evidence/acceptance criteria. Separate Brian authorization prevents automatic promotion, but does not make the gate objectively testable. Define a non-seat-hat registry class, who may instantiate each bounded audit, its termination condition, and objective graduation evidence.
+
+## SHOULD-FIX
+
+- `AGENT_MODEL.md:53`; `SCOUT.md:12-27` — Apart from ACTIVE status, the Scout line accurately matches its charter: advisory-only, no production-authoring, real gates, copies outside production, and Kade/Mason routing. It neither materially grants nor withholds additional authority.
+
+- `AGENT_MODEL.md:87,90,103`; `SCOUT.md:13,20` — The decomposition rule is sound, but production-gate experiments need an explicit split: Scout evaluates a copy using the published gate; Kade owns any gate operation/change; Mason owns an authorized real-document POC. Otherwise “evaluated against” can be read as Scout operating Kade’s gate.
+
+- `AGENT_MODEL.md:55`; `WARDEN.md:12-20`; `LEDGER.md:24-31` — Warden/Ledger separation is clean: Ledger observes documents and expressly does not judge policy correctness; Warden judges rule-following. Warden/Vera is not equally explicit. A system-rules audit could be read as checking PM-artifact sourcing/consistency, which is Vera’s lane. Exclude artifact validation from Warden’s audit scope, or state that Warden audits whether the validation process ran while Vera judges the artifact.
+
+- `BOB.md:105-108` still says the lead follows “the domain the deliverable lands in” and permits direct disagreement resolution. Canonical precedence defeats it and Bob is inactive, but it remains a hazardous self-authority instruction.
+
+- `ATHENA.md:41` says a separate infrastructure deployment “doesn’t require [Kade’s] sign-off,” conflicting with `AGENT_MODEL.md:152`.
+
+- `FRONTIER.md:73` still assigns “roster judgments” to Mason, contrary to `AGENT_MODEL.md:101`’s Brian-decides/Kade-records roster rule.
+
+- `KADE.md:8` still calls Kade the default downstream execution coordinator, while `AGENT_MODEL.md:121` assigns downstream execution coordination to Mason.
+
+- `DEAN.md:7` calls Dean standing, while `AGENT_MODEL.md:29-35,50` makes Dean registered-not-active.
+
+## NIT
+
+- `WHO_DOES_WHAT.md:86-88` still softens the canonical requirement from a “named decision-record reference” to a “named decision reference.”
+
+## Round 3 disposition check
+
+All six claimed fixes hold in the committed text:
+
+1. Durable Buzz event IDs: `AGENT_MODEL.md:7-17`.
+2. Three reproducible Bob/Dean activation conditions: `AGENT_MODEL.md:29-35`.
+3. Stale “BOB.md is untracked” claim removed; the referenced records and charters are committed.
+4. Bob’s seat/end-of-scope distinction is resolved canonically: `AGENT_MODEL.md:40-41`.
+5. Lead table and mandatory mixed-effort decomposition are present: `AGENT_MODEL.md:81-105`.
+6. Front door marks Bob/Dean inactive and splits process among Kade, Ledger, and Athena: `WHO_DOES_WHAT.md:33-42,66-70`.
+
+The seventh is accurately recorded as unresolved rather than falsely fixed: Kade still selects/scopes the review of Kade’s work at `AGENT_MODEL.md:49`.
+
+No files were edited.
+
+**VERDICT: NOT CLEAN — 2 MUST-FIX findings.**

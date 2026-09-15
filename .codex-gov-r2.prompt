@@ -1,0 +1,60 @@
+Confirming review round 2, READ-ONLY. Do not edit any file.
+
+Round 1 returned NOT CLEAN with 8 MUST-FIX on the registration of Bob and Dean in
+product-to-build-os/AGENT_MODEL.md. Round 1's report is at docs/gov-registration-codex-r1.md.
+See `git diff AGENT_MODEL.md` for the current state, and read AGENT_MODEL.md, BOB.md, DEAN.md,
+KADE.md, CASE.md, LEDGER.md, REEVE.md and ATHENA.md in full.
+
+## How each round-1 MUST-FIX was dispositioned
+
+1. **Lead designation ambiguous and circular.** ACCEPTED AND WITHDRAWN. The derived-lead mechanism is
+   removed. The section now declares the question OPEN and reserved to Brian, states that there is NO
+   effort-lead role until he rules and no seat may claim one, records the three reasons the attempt
+   was withdrawn (self-ratifying, circular, unenforceable record), and lists what a ruling must
+   supply. Judge whether the withdrawal is complete: can any remaining sentence still be read as
+   granting effort leadership?
+2. **Record was a dangling reference.** Should be resolved by the same withdrawal. Confirm no
+   dangling "owning cluster's bus" requirement remains anywhere in the file.
+3. **Bob simultaneously operative and not operative.** Addressed with a blockquote immediately above
+   the Bob entry: both seats are REGISTERED, NOT YET ACTIVE, activation needs a CLEAN independent
+   review plus the charter's own banner cleared, round 1 was NOT CLEAN so neither is active, a
+   registered-not-active seat holds NO authority, and this file governs where a charter disagrees
+   about operative state. Judge whether that genuinely removes the pick-your-state exploit, and
+   whether BOB.md's own draft banner can still be read as competing.
+4. **"ALL gates" erased the acceptance boundary.** Addressed with a new bullet splitting three
+   things: Kade owns gate implementation and operation, Case owns the acceptance verdict, Ledger owns
+   catalog and process-document observation, and a gate's owner may never treat its own gate's output
+   as acceptance. Judge whether this is now consistent with CASE.md and LEDGER.md, and whether it
+   contradicts Brian's original instruction that all infrastructure including gates is Kade's. It is
+   meant to be compatible with it, not a reversal.
+5. **Bob's temporary status unfalsifiable.** NOT fixed in text, deliberately ROUTED to Brian: a new
+   OPEN line names it as Brian's, states that without a trigger "temporary" describes intent rather
+   than a constraint, and stands as the reminder. Judge whether routing is the right disposition or
+   whether the seat should not have been registered at all until the end condition existed.
+6. **Dean and Kade overlapping translator authority.** Addressed with an arbitration bullet: Kade is
+   the technical assessor and drafter, Dean is the decision-record relay, a Dean relay of a corpus
+   technical matter must cite Kade's assessment rather than substitute its own. A second bullet names
+   the Dean-to-Reeve handoff point as ACCEPTANCE. Test both against concrete cases.
+7. **Escalation coverage gaps.** Addressed: Bob's line now includes Athena, Ledger and Case routes;
+   Dean's line drops the corpus-only qualifier; a new line routes ALL infrastructure to Kade
+   regardless of cluster. Check for any remaining category with no route, and any route that loops.
+8. **Not reproducible from version control.** PARTIALLY addressed. A new Precedence paragraph states
+   this file is canonical on the roster and that the five-role lists in docs/process/AGENT_RULES.md
+   and CLAUDE.md are historical rather than a narrower ratified roster. BOB.md is STILL UNTRACKED and
+   deliberately so: committing another seat's charter is outside what Kade was asked to do, and it is
+   being raised with Brian instead. Judge whether the precedence statement is sufficient and how
+   severe the untracked charter remains.
+
+## What to do now
+
+Verify each disposition above against the actual text. Then hunt fresh: the new text is ~35 lines of
+governance added under time pressure, so look for a NEW contradiction it introduced, especially
+between the Precedence paragraph and any seat charter, between the activation blockquote and the
+escalation lines (can a non-active seat still be escalated to?), and between the gate-ownership split
+and Kade's own charter.
+
+Read adversarially as a seat hunting for a sentence that lets it author in another's domain, accept
+its own work, or manufacture authority. Quote any such sentence.
+
+Report MUST-FIX / SHOULD-FIX / NIT with file:line. End with an explicit verdict line: CLEAN, or NOT
+CLEAN with the MUST-FIX count. Do not rubber-stamp a fix that only looks addressed.

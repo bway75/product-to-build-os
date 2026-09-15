@@ -1,0 +1,71 @@
+Independent governance review, round 1, READ-ONLY. Do not edit any file.
+
+Repo: product-to-build-os, a documentation-only operating model (no code). Three artifacts are
+being put in place and none is operative until this review passes:
+
+  AGENT_MODEL.md   (canonical role model; MODIFIED, see `git diff AGENT_MODEL.md`)
+  BOB.md           (new seat charter, currently untracked)
+  DEAN.md          (existing seat charter, being made operative)
+
+Read all three in full, plus KADE.md, MASON.md, FRONTIER.md, REEVE.md, ATHENA.md, and CASE.md for
+the boundaries they claim against each other.
+
+## What just changed and why
+
+Two seats, Bob and Dean, existed as charter files but were NOT registered in AGENT_MODEL.md's
+Canonical Roles, so by their own terms they were non-operative. Brian directed Kade (who owns
+AGENT_MODEL.md authoring) to register both, and to land a separate ruling Brian made on 2026-08-06
+that the team is "peer in both clusters, everyone helps whoever is planning/leading an effort."
+
+Brian named one open sub-question and said to resolve it or route it back to him: WHO designates the
+lead for a given effort, and WHERE that designation is recorded. His stated concern, verbatim in
+substance: without it, "the effort lead resolves conflicts" is indistinguishable from self-granted
+rank.
+
+Kade resolved it rather than routing it, in the new "Team Shape" section: the effort lead is DERIVED
+from the domain ownership already ratified in the same file, Brian designates for genuinely
+cross-domain efforts, and an unrecorded designation does not exist.
+
+## Attack these specifically
+
+1. **Does the resolution actually close Brian's gap, or does it relocate it?** Test it against real
+   cases: an effort whose deliverable is a measurement instrument (Bob specs it, Kade builds it, and
+   it measures Mason's corpus). An effort spanning capture and authoring (Frontier and Mason). An
+   effort where two seats each believe the deliverable lands in their domain. If the derivation is
+   ambiguous in any of those, say so, and say what text would close it.
+2. **Is the "unrecorded designation does not exist" rule enforceable as written,** or is it an
+   aspiration with no named artifact? Note that this repo is documentation-only and the "cluster
+   bus" it refers to lives in an adopting project repo, not here. Is that a dangling reference?
+3. **Circularity check.** Point 1 derives leadership from ownership, and ownership is stated in the
+   same file. Is there any effort class where ownership itself is what is being decided, making the
+   rule circular?
+4. **Does the new Bob entry CONTRADICT any other seat's charter?** Bob's charter says all
+   infrastructure including measurement instruments and gates is Kade's. Check KADE.md, CASE.md
+   (validation), and LEDGER.md (process documentation) for a competing claim over gates, metrics, or
+   measurement. A gate is arguably a validation instrument, which is Case's territory. Is the
+   boundary as clean as the new text asserts?
+5. **Bob is declared "temporary by design, currently extended."** Is there any stated condition,
+   owner, or trigger that would actually END the seat, or is "temporary" unfalsifiable as written?
+   Who decides it has wound down?
+6. **Dean versus Reeve.** The split is "Dean relays intent and decisions, Reeve tracks status and
+   chases accepted work." Find a real case that falls in both, or in neither, and say which seat
+   owns it under the current text.
+7. **Dean versus Kade.** KADE.md says Kade translates technical state into PM language and drafts
+   Brian-to-Mason communication. DEAN.md says Dean is Brian's technical translator and carries
+   decided intent to responsible seats. These look overlapping. Is there a case where both would
+   act, and does anything in the text arbitrate it?
+8. **Flat versus ladder coherence.** The new section says the team is peer AND that the written
+   ladders still govern. Is that internally consistent, or does it leave a seat able to justify
+   opposite behaviours by citing different sentences of the same file?
+9. **Escalation completeness.** Two escalation lines were added for Bob and Dean. Check that every
+   new seat has a route for every category of thing it can encounter, and that no route dead-ends or
+   loops.
+10. **Anything a seat could exploit.** Read adversarially as a seat looking for a sentence that lets
+    it author in another's domain, accept its own work, or claim authority. Quote the sentence.
+11. **Factual and reference integrity.** Does AGENT_MODEL.md now reference files that do not exist
+    or are untracked? Are the dates and attributions internally consistent?
+
+Report findings as MUST-FIX / SHOULD-FIX / NIT with file:line and the concrete failure each causes.
+Judge whether Kade was right to resolve the designation question rather than route it to Brian, and
+say plainly if it should have been routed. End with an explicit verdict line: CLEAN, or NOT CLEAN
+with the MUST-FIX count. Be adversarial. Validate AND improve; do not rubber-stamp.

@@ -1,0 +1,57 @@
+Confirming review round 4, READ-ONLY. Do not edit any file.
+
+Rounds 1 to 3 are at docs/gov-registration-codex-r1.md, -r2.md, -r3.md (NOT CLEAN 8, 3, 7). All of
+that work plus new material is now COMMITTED as commit 4a2c55b, deliberately as a checkpoint and
+explicitly NOT accepted-done. Review the committed state of AGENT_MODEL.md and WHO_DOES_WHAT.md.
+Read both in full plus SCOUT.md, WARDEN.md, KADE.md, MASON.md, FRONTIER.md, BOB.md, DEAN.md,
+REEVE.md, ATHENA.md, CASE.md and LEDGER.md.
+
+## New material since round 3, which is the priority for this round
+
+Brian authorized registering Scout and Warden (event 42523dcb..., 2026-08-12). Both had charter
+files and no roster line, so under this file's own precedence rule they were operating outside the
+registration control.
+
+- **Scout** is registered ACTIVE, advisory only, no write authority over corpus, product,
+  infrastructure, governance, roadmap or task state, experiments evaluated against the real
+  production gates, findings routed to Kade (process/infra) or an authorized Mason POC.
+- **Warden** is registered as a HAT, deliberately NOT a standing seat, because WARDEN.md itself puts
+  "acting as a standing autonomous agent until its graduation gate is met" out of scope. Promotion
+  is stated to require the graduation gate AND a separate Brian authorization.
+
+Attack specifically:
+
+1. Does the Scout line match SCOUT.md, or does it grant or withhold anything the charter does not?
+   Scout is ACTIVE while Bob and Dean are registered-not-active: is that asymmetry defensible on the
+   stated activation conditions, or did Scout skip a control the other two are held to? This is the
+   sharpest question in this round. If Scout should have been held to the same three conditions, say
+   so plainly.
+2. Is "a hat, not a standing seat" actually coherent inside a file whose stated job is defining
+   which SEATS exist? Can Warden's registration be read as granting standing authority anyway? Is
+   the graduation gate a real, locatable condition or another unfalsifiable "temporary"?
+3. Do the two new lead-table rows (Scout experiments, Warden audit) collide with any existing row,
+   and does the mixed-effort decomposition rule cover an experiment that touches production?
+4. Warden audits whether the system follows its own rules, while Kade authors and commits the rules
+   and Ledger observes documents. Is that separation clean, or does Warden overlap Ledger or Vera?
+
+## Then re-verify round 3's dispositions did not regress
+
+Six of round 3's seven were fixed (durable decision references now carry Buzz event ids; activation
+conditions restated as three checkable items; the stale "BOB.md is untracked" claim removed; the
+wind-down contradiction resolved; the lead table extended with Brian, Case, Ledger, technical
+shaping and non-corpus implementation plus a mixed-effort decomposition rule; WHO_DOES_WHAT.md
+corrected so Bob and Dean are not presented as active, and "process" split three ways across Kade,
+Ledger and Athena). The seventh was dispositioned rather than fixed: Kade still scopes and invokes
+the review of Kade's own work, recorded in the file as a stated residual gap, closure deferred
+because Brian has not stood Case up.
+
+Confirm each of the six against the actual committed text. Flag any that only looks fixed.
+
+## Then hunt fresh
+
+Read adversarially as a seat looking for a sentence that lets it author in another's domain, accept
+its own work, or manufacture authority. Quote it. Also check whether the checkpoint commit itself
+creates a problem: the file now governs while carrying known unreviewed lines.
+
+Report MUST-FIX / SHOULD-FIX / NIT with file:line. End with an explicit verdict line: CLEAN, or NOT
+CLEAN with the MUST-FIX count.

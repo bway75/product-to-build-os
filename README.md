@@ -88,6 +88,13 @@ Template files alone do not satisfy sprint-start requirements. Before implementa
 - [MASON.md](MASON.md)
 - [LEDGER.md](LEDGER.md)
 - [CASE.md](CASE.md)
+- [REEVE.md](REEVE.md) — cross-team tracker, spans the corpus and the PM/planning cluster; not part of either team's own delivery sequence
+
+### PM / Planning Cluster (parallel to the engineering roles above — female names, each tied to the role's function, to keep the two clusters visually distinct)
+- [ATHENA.md](ATHENA.md) — the Kade-equivalent (PM Process); architects the PM practice, Brian's entry point for this cluster
+- [POLARIS.md](POLARIS.md) — the Mason-equivalent (Roadmap); owns roadmap sequencing and per-initiative children, dispatches per-feature Minions; named for the North Star
+- [IRIS.md](IRIS.md) — Documentation; packages ratified PM-cluster output for external audiences; named for the messenger goddess
+- [VERA.md](VERA.md) — the Case-equivalent (Validation); checks PM artifacts for consistency and sourced evidence; named for truth
 
 ## Templates
 - [docs/templates/TECHNICAL_IMPLEMENTATION_PLAN_TEMPLATE.md](docs/templates/TECHNICAL_IMPLEMENTATION_PLAN_TEMPLATE.md)

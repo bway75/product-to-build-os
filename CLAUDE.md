@@ -1,10 +1,52 @@
 # Product to Build OS — Operator File
 
+## ⚠️ SEAT BOOT, READ FIRST (fires the moment you are named as a role)
+
+If this session's opening instruction identifies you as a role in this repo's model ("I am Kade",
+"You are Mason", "You are Polaris", "You are Athena", or similar, for ANY role in `AGENT_MODEL.md`'s
+current roster — that file governs which roles exist, not the stale list two paragraphs below), that
+identification IS your first task. Run the boot sequence below as your FIRST action, before
+answering anything, picking up any work, or offering a menu of options. A named role that starts
+answering without booting is not up.
+
+**Precondition, working directory — advisory, not a hard stop here.** This repo is methodology
+only; the natural home for a role's live work is the *adopting project repo* (e.g. this model is
+borrowed live by `ot-security-research` for the engineering cluster). If your working directory is
+neither this repo nor a clear adopting project, note that explicitly in your boot report and read
+this repo's files by full path rather than silently assuming relative paths resolve. **Operating a
+role cross-repo by full path from another session is an accepted pattern** (Brian confirmed this for
+Athena from an `ot-security-research` session, 2026-08-31) — flag the mismatch once, then proceed if
+the user confirms, don't refuse or loop on it.
+
+**Boot steps (all roles):**
+1. Read `AGENT_MODEL.md` (canonical roster, authority boundaries, activation state) and your own
+   `<ROLE>.md` charter in full.
+2. Read every file your charter's **Required References** section names — this is where each role's
+   actual reading list lives; do not substitute a shorter guess. For a PM-cluster role that also
+   means the relevant `pm-process/` methodology files (sibling repo,
+   `~/ai-workspace/GitHub/pm-process/`) your charter cites.
+3. Check current state: `docs/CURRENT_STATE.md` for the engineering cluster, or — per your charter's
+   "In an adopting product context, also read..." line — the adopting product's current Initiative
+   Brief / roadmap draft / capability breakdown for the PM cluster. If it's an unfilled template,
+   say so; don't infer state that isn't there.
+4. Check for already-running peer sessions (`ListAgents`) and, if your cluster has a message bus
+   set up yet, its current status/inbox — so you don't duplicate or contradict work already in
+   flight. Absence of a bus is a valid finding, not a blocker to report on.
+5. **Report**, in one paragraph: which role, what you read, what live state you found (including
+   "nothing is in flight yet" if true, and any repo/cwd mismatch from the precondition above), and
+   hand back for direction rather than guessing next steps.
+
+This supersedes Repo-Specific Rule 5 below on *how* invocation works; Rule 5's principle (read the
+file, don't just claim the role) stands, this section is its enforcement mechanism.
+
 ## What This Repo Is
 
 A reusable, documentation-driven operating model for product-to-engineering
-delivery: role-based startup files (Brian → Kade → Mason → Case → Ledger),
-governance rules, and templates that an *adopting project repo* instantiates.
+delivery: role-based startup files, governance rules, and templates that an
+*adopting project repo* instantiates. **The current roster is `AGENT_MODEL.md`
+— do not treat the "Brian → Kade → Mason → Case → Ledger" shorthand elsewhere
+in this file as complete;** it predates Frontier, Reeve, Bob, Dean, Scout,
+Warden, and the whole PM/Planning cluster (Athena, Polaris, Iris, Vera).
 This repo is methodology only — no app code, no project-specific state.
 **Status: active-by-reference** — last direct commit 2026-04-22, but its role
 model is currently borrowed live by the OT-security-research corpus
@@ -17,8 +59,15 @@ Prompt-driven methodology, not a program — no build/test/run command exists
 (confirmed: no `package.json`/scripts/code anywhere outside `.git`). It is
 "run" by having an AI session adopt a role:
 
-1. Open the role entrypoint file at repo root: `BRIAN.md`, `KADE.md`,
-   `MASON.md`, `CASE.md`, or `LEDGER.md`.
+1. Open the role entrypoint file at repo root — one `<ROLE>.md` per name in
+   `AGENT_MODEL.md`'s current roster (currently: `BRIAN.md`, `KADE.md`,
+   `MASON.md`, `CASE.md`, `LEDGER.md`, `SCOUT.md`, `FRONTIER.md`, `REEVE.md`,
+   `ATHENA.md`, `POLARIS.md`, `IRIS.md`, `VERA.md`, plus `BOB.md`/`DEAN.md`
+   registered-not-active and `WARDEN.md` a hat, not a bootable seat — see
+   `AGENT_MODEL.md` for which of these currently hold authority). Do not
+   treat this as a fixed five-file list; a role missing from here that
+   exists in `AGENT_MODEL.md` is this line falling behind, not evidence the
+   role has no entrypoint.
 2. Each says "You are `<Role>`... find all instructions in `<ROLE>.md`" and
    lists Identity, Scope, Responsibilities, Out of Scope, Escalation Rules,
    and Required References (always incl. `AGENT_MODEL.md`).
@@ -59,11 +108,12 @@ becoming unreusable elsewhere (incl. the OT-corpus reuse case). Check: any
 new non-template/non-role/non-process file here gets redirected.
 
 **5. Role invocation requires reading the role file, not just naming it**
-— Trigger: a session/sub-agent told to "act as Kade/Mason/Case/Ledger."
-Behavior: actually read `<ROLE>.md` + `AGENT_MODEL.md` (+ project artifacts
-if applicable) first — nothing enforces this automatically in a doc-only
-repo. Prevents: role drift — claiming a role's authority without its
-constraints loaded. Check: session can cite which role file it read.
+— Trigger: a session/sub-agent told to "act as" ANY role in `AGENT_MODEL.md`
+(not only the original five). Behavior: run the SEAT BOOT sequence at the
+top of this file — nothing enforces this automatically in a doc-only repo
+otherwise. Prevents: role drift — claiming a role's authority without its
+constraints loaded. Check: session can cite which role file and which
+Required References it actually read.
 
 ## What NOT To Restate
 
